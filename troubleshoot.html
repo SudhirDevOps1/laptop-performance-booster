@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔧 Troubleshooting Guide | SudhirDevOps1</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Poppins', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); }
+        .code-block { background: #1e293b; border-radius: 8px; }
+        .code-block code { color: #22d3ee; }
+        .problem-card { border-left: 4px solid #38ef7d; }
+        .solution-step { counter-increment: step; }
+        .solution-step::before { content: counter(step); @apply bg-green-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold mr-3; }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <a href="index.html" class="inline-block mb-4 bg-white/20 px-4 py-2 rounded-full text-sm hover:bg-white/30 transition">
+                ← Back to Main Page
+            </a>
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4">🔧 Troubleshooting Guide</h1>
+            <p class="text-xl opacity-90">Common Problems & Solutions</p>
+            <div class="mt-4 inline-flex items-center bg-white/20 px-4 py-2 rounded-full">
+                <span class="text-sm">by <strong>SudhirDevOps1</strong></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+
+        <!-- Problem 1: Slow Laptop -->
+        <section class="mb-8">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="bg-red-500 text-white px-6 py-4">
+                    <h2 class="text-xl font-bold flex items-center">
+                        <span class="text-2xl mr-3">🐌</span>
+                        Problem: Laptop Bahut Slow Hai
+                    </h2>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-gray-800 mb-4 text-lg">✅ Solutions:</h3>
+                    <div class="space-y-4">
+                        <div class="bg-green-50 p-4 rounded-lg problem-card">
+                            <h4 class="font-semibold text-green-800">Step 1: Temp Files Clean Karo</h4>
+                            <p class="text-gray-600 text-sm mt-1">Win + R → %temp% → Ctrl+A → Delete</p>
+                            <div class="code-block p-3 mt-2">
+                                <code>del /q/f/s %TEMP%\*</code>
+                            </div>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg problem-card">
+                            <h4 class="font-semibold text-green-800">Step 2: Startup Programs Disable Karo</h4>
+                            <p class="text-gray-600 text-sm mt-1">Ctrl + Shift + Esc → Startup Tab → Disable unwanted</p>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg problem-card">
+                            <h4 class="font-semibold text-green-800">Step 3: Disk Cleanup Run Karo</h4>
+                            <div class="code-block p-3 mt-2">
+                                <code>cleanmgr /d C: /verylowdisk</code>
+                            </div>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg problem-card">
+                            <h4 class="font-semibold text-green-800">Step 4: Visual Effects Disable Karo</h4>
+                            <p class="text-gray-600 text-sm mt-1">Win + R → sysdm.cpl → Advanced → Performance Settings → Best Performance</p>
+                        </div>
+                        <div class="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-500">
+                            <h4 class="font-semibold text-yellow-800">💡 Pro Tip:</h4>
+                            <p class="text-gray-600 text-sm">Agar HDD hai toh SSD upgrade karo - 10x faster ho jayega!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem 2: Internet Slow -->
+        <section class="mb-8">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="bg-blue-500 text-white px-6 py-4">
+                    <h2 class="text-xl font-bold flex items-center">
+                        <span class="text-2xl mr-3">📶</span>
+                        Problem: Internet Slow Hai / Website Nahi Khul Rahi
+                    </h2>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-gray-800 mb-4 text-lg">✅ Solutions:</h3>
+                    <div class="space-y-4">
+                        <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                            <h4 class="font-semibold text-blue-800">Step 1: DNS Flush Karo</h4>
+                            <div class="code-block p-3 mt-2">
+                                <code>ipconfig /flushdns</code>
+                            </div>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                            <h4 class="font-semibold text-blue-800">Step 2: IP Release & Renew</h4>
+                            <div class="code-block p-3 mt-2">
+                                <code>ipconfig /release && ipconfig /renew</code>
+                            </div>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                            <h4 class="font-semibold text-blue-800">Step 3: Winsock Reset</h4>
+                            <div class="code-block p-3 mt-2">
+                                <code>netsh winsock reset</code>
+                            </div>
+                            <p class="text-gray-600 text-sm mt-2">⚠️ Restart required after this</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                            <h4 class="font-semibold text-blue-800">Step 4: DNS Change Karo (Google DNS)</h4>
+                            <p class="text-gray-600 text-sm mt-1">Network Settings → IPv4 → DNS: 8.8.8.8 and 8.8.4.4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem 3: Blue Screen -->
+        <section class="mb-8">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="bg-indigo-500 text-white px-6 py-4">
+                    <h2 class="text-xl font-bold flex items-center">
+                        <span class="text-2xl mr-3">💀</span>
+                        Problem: Blue Screen of Death (BSOD)
+                    </h2>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-gray-800 mb-4 text-lg">✅ Solutions:</h3>
+                    <div class="space-y-4">
+                        <div class="bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-500">
+                            <h4 class="font-semibold text-indigo-800">Step 1: System Files Repair</h4>
+                            <div class="code-block p-3 mt-2">
+                                <code>sfc /scannow</code>
+                            </div>
+                        </div>
+                        <div class="bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-500">
+                            <h4 class="font-semibold text-indigo-800">Step 2: DISM Repair</h4>
+                            <div class="code-block p-3 mt-2">
+                                <code>DISM /Online /Cleanup-Image /RestoreHealth</code>
+                            </div>
+                        </div>
+                        <div class="bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-500">
+                            <h4 class="font-semibold text-indigo-800">Step 3: Memory Diagnostic</h4>
+                            <div class="code-block p-3 mt-2">
+                                <code>mdsched.exe</code>
+                            </div>
+                            <p class="text-gray-600 text-sm mt-2">Restart hoga aur RAM test karega</p>
+                        </div>
+                        <div class="bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-500">
+                            <h4 class="font-semibold text-indigo-800">Step 4: Check Disk</h4>
+                            <div class="code-block p-3 mt-2">
+                                <code>chkdsk C: /f /r</code>
+                            </div>
+                        </div>
+                        <div class="bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-500">
+                            <h4 class="font-semibold text-indigo-800">Step 5: Drivers Update Karo</h4>
+                            <p class="text-gray-600 text-sm mt-1">Especially Graphics & Chipset drivers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem 4: High Disk Usage -->
+        <section class="mb-8">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="bg-orange-500 text-white px-6 py-4">
+                    <h2 class="text-xl font-bold flex items-center">
+                        <span class="text-2xl mr-3">💾</span>
+                        Problem: 100% Disk Usage (Task Manager mein)
+                    </h2>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-gray-800 mb-4 text-lg">✅ Solutions:</h3>
+                    <div class="space-y-4">
+                        <div class="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-500">
+                            <h4 class="font-semibold text-orange-800">Step 1: Superfetch/SysMain Disable</h4>
+                            <div class="code-block p-3 mt-2">
+                                <code>net stop "SysMain" && sc config "SysMain" start=disabled</code>
+                            </div>
+                        </div>
+                        <div class="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-500">
+                            <h4 class="font-semibold text-orange-800">Step 2: Windows Search Disable</h4>
+                            <div class="code-block p-3 mt-2">
+                                <code>net stop "WSearch" && sc config "WSearch" start=disabled</code>
+                            </div>
+                        </div>
+                        <div class="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-500">
+                            <h4 class="font-semibold text-orange-800">Step 3: Windows Tips Disable</h4>
+                            <p class="text-gray-600 text-sm mt-1">Settings → System → Notifications → Get tips OFF</p>
+                        </div>
+                        <div class="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-500">
+                            <h4 class="font-semibold text-orange-800">Step 4: Virtual Memory Fix</h4>
+                            <p class="text-gray-600 text-sm mt-1">sysdm.cpl → Advanced → Performance → Virtual Memory → Custom Size</p>
+                        </div>
+                        <div class="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-500">
+                            <h4 class="font-semibold text-yellow-800">💡 Best Solution:</h4>
+                            <p class="text-gray-600 text-sm">HDD ko SSD se replace karo - 100% disk usage problem almost always HDD ki wajah se hota hai!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem 5: No Sound -->
+        <section class="mb-8">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="bg-purple-500 text-white px-6 py-4">
+                    <h2 class="text-xl font-bold flex items-center">
+                        <span class="text-2xl mr-3">🔇</span>
+                        Problem: Sound Nahi Aa Raha
+                    </h2>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-gray-800 mb-4 text-lg">✅ Solutions:</h3>
+                    <div class="space-y-4">
+                        <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
+                            <h4 class="font-semibold text-purple-800">Step 1: Audio Troubleshooter</h4>
+                            <p class="text-gray-600 text-sm mt-1">Right click speaker icon → Troubleshoot sound problems</p>
+                        </div>
+                        <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
+                            <h4 class="font-semibold text-purple-800">Step 2: Audio Service Restart</h4>
+                            <div class="code-block p-3 mt-2">
+                                <code>net stop audiosrv && net start audiosrv</code>
+                            </div>
+                        </div>
+                        <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
+                            <h4 class="font-semibold text-purple-800">Step 3: Sound Settings Check</h4>
+                            <div class="code-block p-3 mt-2">
+                                <code>mmsys.cpl</code>
+                            </div>
+                            <p class="text-gray-600 text-sm mt-2">Check default device is correct</p>
+                        </div>
+                        <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
+                            <h4 class="font-semibold text-purple-800">Step 4: Audio Driver Reinstall</h4>
+                            <p class="text-gray-600 text-sm mt-1">Device Manager → Sound → Uninstall → Restart</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem 6: WiFi Not Connecting -->
+        <section class="mb-8">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="bg-cyan-500 text-white px-6 py-4">
+                    <h2 class="text-xl font-bold flex items-center">
+                        <span class="text-2xl mr-3">📡</span>
+                        Problem: WiFi Connect Nahi Ho Raha
+                    </h2>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-gray-800 mb-4 text-lg">✅ Solutions:</h3>
+                    <div class="space-y-4">
+                        <div class="bg-cyan-50 p-4 rounded-lg border-l-4 border-cyan-500">
+                            <h4 class="font-semibold text-cyan-800">Step 1: Forget & Reconnect</h4>
+                            <p class="text-gray-600 text-sm mt-1">Settings → WiFi → Network → Forget → Reconnect</p>
+                        </div>
+                        <div class="bg-cyan-50 p-4 rounded-lg border-l-4 border-cyan-500">
+                            <h4 class="font-semibold text-cyan-800">Step 2: Network Adapter Reset</h4>
+                            <div class="code-block p-3 mt-2">
+                                <code>netsh int ip reset && netsh winsock reset</code>
+                            </div>
+                        </div>
+                        <div class="bg-cyan-50 p-4 rounded-lg border-l-4 border-cyan-500">
+                            <h4 class="font-semibold text-cyan-800">Step 3: WiFi Driver Reinstall</h4>
+                            <p class="text-gray-600 text-sm mt-1">Device Manager → Network Adapters → WiFi → Uninstall → Restart</p>
+                        </div>
+                        <div class="bg-cyan-50 p-4 rounded-lg border-l-4 border-cyan-500">
+                            <h4 class="font-semibold text-cyan-800">Step 4: Network Reset (Windows 10/11)</h4>
+                            <p class="text-gray-600 text-sm mt-1">Settings → Network → Advanced → Network Reset</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem 7: Battery Draining Fast -->
+        <section class="mb-8">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="bg-green-500 text-white px-6 py-4">
+                    <h2 class="text-xl font-bold flex items-center">
+                        <span class="text-2xl mr-3">🔋</span>
+                        Problem: Battery Jaldi Khatam Ho Rahi
+                    </h2>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-gray-800 mb-4 text-lg">✅ Solutions:</h3>
+                    <div class="space-y-4">
+                        <div class="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+                            <h4 class="font-semibold text-green-800">Step 1: Battery Report Generate Karo</h4>
+                            <div class="code-block p-3 mt-2">
+                                <code>powercfg /batteryreport</code>
+                            </div>
+                            <p class="text-gray-600 text-sm mt-2">Report Desktop pe save hogi</p>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+                            <h4 class="font-semibold text-green-800">Step 2: Power Saver Mode Use Karo</h4>
+                            <div class="code-block p-3 mt-2">
+                                <code>powercfg /setactive a1841308-3541-4fab-bc81-f71556f20b4a</code>
+                            </div>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+                            <h4 class="font-semibold text-green-800">Step 3: Background Apps Disable</h4>
+                            <p class="text-gray-600 text-sm mt-1">Settings → Privacy → Background Apps → OFF</p>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+                            <h4 class="font-semibold text-green-800">Step 4: Brightness Kam Karo</h4>
+                            <p class="text-gray-600 text-sm mt-1">Win + A → Brightness slider</p>
+                        </div>
+                        <div class="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-500">
+                            <h4 class="font-semibold text-yellow-800">💡 Check Battery Health:</h4>
+                            <p class="text-gray-600 text-sm">Agar Design Capacity vs Full Charge Capacity mein 20%+ difference hai, battery replace karna padega.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Diagnostic Commands -->
+        <section class="mb-8">
+            <div class="bg-gray-800 text-white rounded-2xl p-8">
+                <h2 class="text-2xl font-bold mb-6 flex items-center">
+                    <span class="text-3xl mr-3">⚡</span>
+                    Quick Diagnostic Commands
+                </h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="bg-white/10 p-4 rounded-lg">
+                        <h4 class="font-semibold text-green-400">System Info</h4>
+                        <code class="text-cyan-300 text-sm">msinfo32</code>
+                    </div>
+                    <div class="bg-white/10 p-4 rounded-lg">
+                        <h4 class="font-semibold text-green-400">Event Viewer</h4>
+                        <code class="text-cyan-300 text-sm">eventvwr.msc</code>
+                    </div>
+                    <div class="bg-white/10 p-4 rounded-lg">
+                        <h4 class="font-semibold text-green-400">Reliability History</h4>
+                        <code class="text-cyan-300 text-sm">perfmon /rel</code>
+                    </div>
+                    <div class="bg-white/10 p-4 rounded-lg">
+                        <h4 class="font-semibold text-green-400">Device Manager</h4>
+                        <code class="text-cyan-300 text-sm">devmgmt.msc</code>
+                    </div>
+                    <div class="bg-white/10 p-4 rounded-lg">
+                        <h4 class="font-semibold text-green-400">Disk Management</h4>
+                        <code class="text-cyan-300 text-sm">diskmgmt.msc</code>
+                    </div>
+                    <div class="bg-white/10 p-4 rounded-lg">
+                        <h4 class="font-semibold text-green-400">Resource Monitor</h4>
+                        <code class="text-cyan-300 text-sm">resmon</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-2">Made with ❤️ by <strong>SudhirDevOps1</strong></p>
+            <div class="space-x-4">
+                <a href="index.html" class="inline-block bg-white/20 px-6 py-2 rounded-full hover:bg-white/30 transition">Main Page</a>
+                <a href="tools.html" class="inline-block bg-white/20 px-6 py-2 rounded-full hover:bg-white/30 transition">Tools</a>
+                <a href="scripts.html" class="inline-block bg-white/20 px-6 py-2 rounded-full hover:bg-white/30 transition">Scripts</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

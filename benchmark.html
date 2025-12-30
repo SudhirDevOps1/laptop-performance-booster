@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📊 Laptop Benchmark & Speed Test | SudhirDevOps1</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Poppins', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+        .code-block { background: #1e293b; border-radius: 8px; }
+        .code-block code { color: #22d3ee; }
+        .pulse { animation: pulse 2s infinite; }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .progress-bar { transition: width 1s ease-in-out; }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <a href="index.html" class="inline-block mb-4 bg-white/20 px-4 py-2 rounded-full text-sm hover:bg-white/30 transition">
+                ← Back to Main Page
+            </a>
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4">📊 Laptop Benchmark & Speed Test</h1>
+            <p class="text-xl opacity-90">Apne Laptop Ki Speed Check Karo!</p>
+            <div class="mt-4 inline-flex items-center bg-white/20 px-4 py-2 rounded-full">
+                <span class="text-sm">by <strong>SudhirDevOps1</strong></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+
+        <!-- Quick System Info -->
+        <section class="mb-12">
+            <div class="bg-white rounded-2xl shadow-lg p-8 card transition-all">
+                <div class="flex items-center mb-6">
+                    <span class="text-4xl mr-4">🖥️</span>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800">Quick System Info Commands</h2>
+                        <p class="text-gray-500">Apne laptop ki specs dekho</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-6 rounded-xl">
+                        <h3 class="font-bold text-lg mb-2">🧠 CPU Info</h3>
+                        <div class="bg-black/30 p-3 rounded mt-2">
+                            <code class="text-sm">wmic cpu get name,numberofcores,maxclockspeed</code>
+                        </div>
+                        <button onclick="copyCmd('wmic cpu get name,numberofcores,maxclockspeed')" class="mt-3 bg-white/20 px-4 py-2 rounded text-sm hover:bg-white/30">📋 Copy</button>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-green-500 to-green-600 text-white p-6 rounded-xl">
+                        <h3 class="font-bold text-lg mb-2">💾 RAM Info</h3>
+                        <div class="bg-black/30 p-3 rounded mt-2">
+                            <code class="text-sm">wmic memorychip get capacity,speed,manufacturer</code>
+                        </div>
+                        <button onclick="copyCmd('wmic memorychip get capacity,speed,manufacturer')" class="mt-3 bg-white/20 px-4 py-2 rounded text-sm hover:bg-white/30">📋 Copy</button>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-purple-500 to-purple-600 text-white p-6 rounded-xl">
+                        <h3 class="font-bold text-lg mb-2">💽 Disk Info</h3>
+                        <div class="bg-black/30 p-3 rounded mt-2">
+                            <code class="text-sm">wmic diskdrive get model,size,mediatype</code>
+                        </div>
+                        <button onclick="copyCmd('wmic diskdrive get model,size,mediatype')" class="mt-3 bg-white/20 px-4 py-2 rounded text-sm hover:bg-white/30">📋 Copy</button>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-orange-500 to-orange-600 text-white p-6 rounded-xl">
+                        <h3 class="font-bold text-lg mb-2">🎮 GPU Info</h3>
+                        <div class="bg-black/30 p-3 rounded mt-2">
+                            <code class="text-sm">wmic path win32_videocontroller get name,adapterram</code>
+                        </div>
+                        <button onclick="copyCmd('wmic path win32_videocontroller get name,adapterram')" class="mt-3 bg-white/20 px-4 py-2 rounded text-sm hover:bg-white/30">📋 Copy</button>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-pink-500 to-pink-600 text-white p-6 rounded-xl">
+                        <h3 class="font-bold text-lg mb-2">🔋 Battery Health</h3>
+                        <div class="bg-black/30 p-3 rounded mt-2">
+                            <code class="text-sm">powercfg /batteryreport</code>
+                        </div>
+                        <button onclick="copyCmd('powercfg /batteryreport')" class="mt-3 bg-white/20 px-4 py-2 rounded text-sm hover:bg-white/30">📋 Copy</button>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-cyan-500 to-cyan-600 text-white p-6 rounded-xl">
+                        <h3 class="font-bold text-lg mb-2">📋 Full System Info</h3>
+                        <div class="bg-black/30 p-3 rounded mt-2">
+                            <code class="text-sm">msinfo32</code>
+                        </div>
+                        <button onclick="copyCmd('msinfo32')" class="mt-3 bg-white/20 px-4 py-2 rounded text-sm hover:bg-white/30">📋 Copy</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Simulated Speed Test -->
+        <section class="mb-12">
+            <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl shadow-lg p-8 text-white">
+                <div class="flex items-center mb-6">
+                    <span class="text-4xl mr-4">⚡</span>
+                    <div>
+                        <h2 class="text-2xl font-bold">Browser Speed Test</h2>
+                        <p class="opacity-80">Apne browser ki speed check karo</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-white/10 p-6 rounded-xl text-center">
+                        <span class="text-4xl">🧮</span>
+                        <h3 class="font-bold mt-2">Math Operations</h3>
+                        <p id="mathScore" class="text-3xl font-bold mt-2">--</p>
+                        <p class="text-sm opacity-70">ops/sec</p>
+                    </div>
+                    <div class="bg-white/10 p-6 rounded-xl text-center">
+                        <span class="text-4xl">🎨</span>
+                        <h3 class="font-bold mt-2">DOM Manipulation</h3>
+                        <p id="domScore" class="text-3xl font-bold mt-2">--</p>
+                        <p class="text-sm opacity-70">ops/sec</p>
+                    </div>
+                    <div class="bg-white/10 p-6 rounded-xl text-center">
+                        <span class="text-4xl">💾</span>
+                        <h3 class="font-bold mt-2">Memory Speed</h3>
+                        <p id="memScore" class="text-3xl font-bold mt-2">--</p>
+                        <p class="text-sm opacity-70">MB/s</p>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button id="startTest" onclick="runSpeedTest()" class="bg-white text-purple-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition pulse">
+                        🚀 Start Speed Test
+                    </button>
+                </div>
+
+                <div id="testProgress" class="hidden mt-6">
+                    <div class="bg-white/20 rounded-full h-4 overflow-hidden">
+                        <div id="progressBar" class="bg-white h-4 progress-bar" style="width: 0%"></div>
+                    </div>
+                    <p id="testStatus" class="text-center mt-2 opacity-80">Testing...</p>
+                </div>
+
+                <div id="testResult" class="hidden mt-6 bg-white/10 p-6 rounded-xl text-center">
+                    <h3 class="text-xl font-bold mb-2">🎯 Overall Score</h3>
+                    <p id="overallScore" class="text-5xl font-bold"></p>
+                    <p id="scoreRating" class="mt-2 text-lg"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Online Benchmark Tools -->
+        <section class="mb-12">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <div class="flex items-center mb-6">
+                    <span class="text-4xl mr-4">🌐</span>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800">Online Benchmark Tools</h2>
+                        <p class="text-gray-500">Professional benchmarking websites</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <a href="https://www.speedtest.net" target="_blank" class="bg-gradient-to-br from-purple-100 to-purple-200 p-6 rounded-xl text-center hover:shadow-lg transition card">
+                        <span class="text-4xl">🚀</span>
+                        <h3 class="font-bold text-purple-800 mt-2">Speedtest.net</h3>
+                        <p class="text-sm text-purple-600">Internet Speed Test</p>
+                    </a>
+                    <a href="https://www.userbenchmark.com" target="_blank" class="bg-gradient-to-br from-blue-100 to-blue-200 p-6 rounded-xl text-center hover:shadow-lg transition card">
+                        <span class="text-4xl">📊</span>
+                        <h3 class="font-bold text-blue-800 mt-2">UserBenchmark</h3>
+                        <p class="text-sm text-blue-600">Full PC Benchmark</p>
+                    </a>
+                    <a href="https://www.cpubenchmark.net" target="_blank" class="bg-gradient-to-br from-green-100 to-green-200 p-6 rounded-xl text-center hover:shadow-lg transition card">
+                        <span class="text-4xl">🧠</span>
+                        <h3 class="font-bold text-green-800 mt-2">CPU Benchmark</h3>
+                        <p class="text-sm text-green-600">CPU Comparison</p>
+                    </a>
+                    <a href="https://www.videocardbenchmark.net" target="_blank" class="bg-gradient-to-br from-orange-100 to-orange-200 p-6 rounded-xl text-center hover:shadow-lg transition card">
+                        <span class="text-4xl">🎮</span>
+                        <h3 class="font-bold text-orange-800 mt-2">GPU Benchmark</h3>
+                        <p class="text-sm text-orange-600">Graphics Card Test</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Performance Comparison -->
+        <section class="mb-12">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <div class="flex items-center mb-6">
+                    <span class="text-4xl mr-4">📈</span>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800">Performance Comparison Guide</h2>
+                        <p class="text-gray-500">Apna score compare karo</p>
+                    </div>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead class="bg-gray-100">
+                            <tr>
+                                <th class="px-4 py-3 text-left">Component</th>
+                                <th class="px-4 py-3 text-center">🐌 Slow</th>
+                                <th class="px-4 py-3 text-center">👍 Average</th>
+                                <th class="px-4 py-3 text-center">🚀 Fast</th>
+                                <th class="px-4 py-3 text-center">⚡ Beast</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b">
+                                <td class="px-4 py-3 font-medium">🧠 CPU (Cores)</td>
+                                <td class="px-4 py-3 text-center text-red-600">2 cores</td>
+                                <td class="px-4 py-3 text-center text-yellow-600">4 cores</td>
+                                <td class="px-4 py-3 text-center text-green-600">6-8 cores</td>
+                                <td class="px-4 py-3 text-center text-purple-600">12+ cores</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="px-4 py-3 font-medium">💾 RAM</td>
+                                <td class="px-4 py-3 text-center text-red-600">4 GB</td>
+                                <td class="px-4 py-3 text-center text-yellow-600">8 GB</td>
+                                <td class="px-4 py-3 text-center text-green-600">16 GB</td>
+                                <td class="px-4 py-3 text-center text-purple-600">32+ GB</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="px-4 py-3 font-medium">💽 Storage</td>
+                                <td class="px-4 py-3 text-center text-red-600">HDD 5400rpm</td>
+                                <td class="px-4 py-3 text-center text-yellow-600">HDD 7200rpm</td>
+                                <td class="px-4 py-3 text-center text-green-600">SATA SSD</td>
+                                <td class="px-4 py-3 text-center text-purple-600">NVMe SSD</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="px-4 py-3 font-medium">🎮 GPU</td>
+                                <td class="px-4 py-3 text-center text-red-600">Integrated</td>
+                                <td class="px-4 py-3 text-center text-yellow-600">GTX 1650</td>
+                                <td class="px-4 py-3 text-center text-green-600">RTX 3060</td>
+                                <td class="px-4 py-3 text-center text-purple-600">RTX 4080+</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-medium">🌐 Internet</td>
+                                <td class="px-4 py-3 text-center text-red-600">&lt;10 Mbps</td>
+                                <td class="px-4 py-3 text-center text-yellow-600">10-50 Mbps</td>
+                                <td class="px-4 py-3 text-center text-green-600">50-100 Mbps</td>
+                                <td class="px-4 py-3 text-center text-purple-600">100+ Mbps</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Boot Time Test -->
+        <section class="mb-12">
+            <div class="bg-gradient-to-r from-green-500 to-teal-500 rounded-2xl shadow-lg p-8 text-white">
+                <div class="flex items-center mb-6">
+                    <span class="text-4xl mr-4">⏱️</span>
+                    <div>
+                        <h2 class="text-2xl font-bold">Boot Time Check</h2>
+                        <p class="opacity-80">Laptop kitni der mein ON hota hai?</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white/10 p-6 rounded-xl">
+                        <h3 class="font-bold text-lg mb-3">📋 Check Last Boot Time:</h3>
+                        <div class="bg-black/30 p-3 rounded">
+                            <code>systeminfo | find "Boot Time"</code>
+                        </div>
+                        <button onclick="copyCmd('systeminfo | find \"Boot Time\"')" class="mt-3 bg-white/20 px-4 py-2 rounded text-sm">📋 Copy</button>
+                    </div>
+                    <div class="bg-white/10 p-6 rounded-xl">
+                        <h3 class="font-bold text-lg mb-3">🚀 Event Viewer Boot Time:</h3>
+                        <div class="bg-black/30 p-3 rounded">
+                            <code>eventvwr.msc</code>
+                        </div>
+                        <p class="text-sm mt-2 opacity-80">Applications → Microsoft → Windows → Diagnostics-Performance → Operational</p>
+                    </div>
+                </div>
+
+                <div class="mt-6 bg-white/10 p-4 rounded-xl">
+                    <h4 class="font-bold mb-2">🎯 Ideal Boot Times:</h4>
+                    <div class="grid grid-cols-3 gap-4 text-center">
+                        <div>
+                            <p class="text-2xl font-bold">10-20s</p>
+                            <p class="text-sm opacity-80">NVMe SSD</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold">20-40s</p>
+                            <p class="text-sm opacity-80">SATA SSD</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold">60-120s</p>
+                            <p class="text-sm opacity-80">HDD</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stress Test Warning -->
+        <section class="mb-12">
+            <div class="bg-red-50 border-2 border-red-200 rounded-2xl p-8">
+                <h2 class="text-2xl font-bold text-red-800 mb-4 flex items-center">
+                    <span class="mr-3">⚠️</span> Stress Testing Warning
+                </h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="font-semibold text-red-700 mb-2">❌ Kya NA Karein:</h3>
+                        <ul class="text-gray-700 space-y-1">
+                            <li>• Heavy stress test bina cooling ke</li>
+                            <li>• Laptop battery pe stress test</li>
+                            <li>• Unknown software se benchmark</li>
+                            <li>• Overclock bina knowledge ke</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-green-700 mb-2">✅ Kya Karein:</h3>
+                        <ul class="text-gray-700 space-y-1">
+                            <li>• Charger lagake test karo</li>
+                            <li>• Cooling pad use karo</li>
+                            <li>• Temperature monitor karo</li>
+                            <li>• Trusted tools hi use karo</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-2">Made with ❤️ by <strong>SudhirDevOps1</strong></p>
+            <div class="space-x-4">
+                <a href="index.html" class="inline-block bg-white/20 px-6 py-2 rounded-full hover:bg-white/30 transition">Main Page</a>
+                <a href="tools.html" class="inline-block bg-white/20 px-6 py-2 rounded-full hover:bg-white/30 transition">Tools</a>
+                <a href="scripts.html" class="inline-block bg-white/20 px-6 py-2 rounded-full hover:bg-white/30 transition">Scripts</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast -->
+    <div id="toast" class="fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform translate-y-20 opacity-0 transition-all duration-300">
+        ✅ Copied!
+    </div>
+
+    <script>
+        function copyCmd(cmd) {
+            navigator.clipboard.writeText(cmd);
+            const toast = document.getElementById('toast');
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => toast.classList.add('translate-y-20', 'opacity-0'), 2000);
+        }
+
+        async function runSpeedTest() {
+            const btn = document.getElementById('startTest');
+            const progress = document.getElementById('testProgress');
+            const progressBar = document.getElementById('progressBar');
+            const status = document.getElementById('testStatus');
+            const result = document.getElementById('testResult');
+
+            btn.disabled = true;
+            btn.classList.remove('pulse');
+            btn.textContent = '⏳ Testing...';
+            progress.classList.remove('hidden');
+            result.classList.add('hidden');
+
+            // Math Test
+            status.textContent = '🧮 Testing Math Operations...';
+            progressBar.style.width = '20%';
+            await sleep(500);
+            
+            const mathStart = performance.now();
+            let mathOps = 0;
+            while (performance.now() - mathStart < 1000) {
+                Math.sqrt(Math.random() * 10000);
+                mathOps++;
+            }
+            document.getElementById('mathScore').textContent = formatNumber(mathOps);
+
+            // DOM Test
+            status.textContent = '🎨 Testing DOM Manipulation...';
+            progressBar.style.width = '50%';
+            await sleep(500);
+
+            const domStart = performance.now();
+            let domOps = 0;
+            const testDiv = document.createElement('div');
+            while (performance.now() - domStart < 1000) {
+                testDiv.innerHTML = '<span>' + domOps + '</span>';
+                domOps++;
+            }
+            document.getElementById('domScore').textContent = formatNumber(domOps);
+
+            // Memory Test
+            status.textContent = '💾 Testing Memory Speed...';
+            progressBar.style.width = '80%';
+            await sleep(500);
+
+            const memStart = performance.now();
+            const arr = new Array(1000000);
+            for (let i = 0; i < arr.length; i++) arr[i] = i;
+            const memTime = performance.now() - memStart;
+            const memSpeed = Math.round((arr.length * 8) / memTime / 1000);
+            document.getElementById('memScore').textContent = memSpeed;
+
+            // Calculate Overall
+            progressBar.style.width = '100%';
+            status.textContent = '✅ Complete!';
+            await sleep(500);
+
+            const overallScore = Math.round((mathOps / 10000 + domOps / 1000 + memSpeed) / 3 * 100);
+            document.getElementById('overallScore').textContent = overallScore;
+            
+            let rating = '';
+            if (overallScore > 800) rating = '⚡ BEAST MODE! Laptop bohot fast hai!';
+            else if (overallScore > 500) rating = '🚀 Excellent! Great performance!';
+            else if (overallScore > 300) rating = '👍 Good! Average laptop';
+            else rating = '🐌 Slow - Optimization needed';
+            
+            document.getElementById('scoreRating').textContent = rating;
+            result.classList.remove('hidden');
+
+            btn.disabled = false;
+            btn.classList.add('pulse');
+            btn.textContent = '🔄 Test Again';
+        }
+
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        function formatNumber(num) {
+            if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
+            if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
+            return num;
+        }
+    </script>
+</body>
+</html>

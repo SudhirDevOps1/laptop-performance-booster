@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📜 Batch Scripts Collection | SudhirDevOps1</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { font-family: 'Poppins', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
+        pre { background: #1e293b; color: #22d3ee; padding: 1rem; border-radius: 8px; overflow-x: auto; font-size: 0.8rem; }
+        .glow { animation: glow 2s ease-in-out infinite alternate; }
+        @keyframes glow {
+            from { box-shadow: 0 0 10px #667eea; }
+            to { box-shadow: 0 0 20px #764ba2; }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white min-h-screen">
+    <!-- Header -->
+    <header class="gradient-bg py-16">
+        <div class="container mx-auto px-4 text-center">
+            <a href="index.html" class="inline-block mb-4 bg-white/20 px-4 py-2 rounded-full text-sm hover:bg-white/30 transition">
+                ← Back to Main Page
+            </a>
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4">📜 Batch Scripts Collection</h1>
+            <p class="text-xl opacity-90">Ready-to-Use Windows Scripts</p>
+            <div class="mt-4 inline-flex items-center bg-white/20 px-4 py-2 rounded-full">
+                <span class="text-sm">by <strong>SudhirDevOps1</strong></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+
+        <!-- Script 1: Ultimate Cleanup -->
+        <section class="mb-12">
+            <div class="bg-gray-800 rounded-2xl p-8 card transition-all duration-300 border border-purple-500/30">
+                <div class="flex items-center justify-between mb-6">
+                    <div class="flex items-center">
+                        <span class="text-4xl mr-4">🧹</span>
+                        <div>
+                            <h2 class="text-2xl font-bold">Ultimate Cleanup Script</h2>
+                            <p class="text-gray-400">Sab kuch ek click mein saaf!</p>
+                        </div>
+                    </div>
+                    <button onclick="downloadScript1()" class="bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-lg font-bold transition glow">
+                        <i class="fas fa-download mr-2"></i> Download
+                    </button>
+                </div>
+                <pre><code>@echo off
+title Ultimate Cleanup Script by SudhirDevOps1
+color 0A
+echo.
+echo  ╔══════════════════════════════════════════════════════════╗
+echo  ║         ULTIMATE CLEANUP SCRIPT v2.0                     ║
+echo  ║              by SudhirDevOps1                            ║
+echo  ╚══════════════════════════════════════════════════════════╝
+echo.
+
+:: Check Admin
+net session >nul 2>&1
+if %errorlevel% neq 0 (
+    echo [ERROR] Please run as Administrator!
+    pause
+    exit
+)
+
+echo [1/8] Cleaning User Temp Files...
+del /q/f/s "%TEMP%\*" 2>nul
+rd /s /q "%TEMP%" 2>nul
+md "%TEMP%" 2>nul
+echo       Done!
+
+echo [2/8] Cleaning Windows Temp...
+del /q/f/s "C:\Windows\Temp\*" 2>nul
+echo       Done!
+
+echo [3/8] Cleaning Prefetch...
+del /q/f/s "C:\Windows\Prefetch\*" 2>nul
+echo       Done!
+
+echo [4/8] Cleaning Recent Files...
+del /q/f "%APPDATA%\Microsoft\Windows\Recent\*" 2>nul
+del /q/f "%APPDATA%\Microsoft\Windows\Recent\AutomaticDestinations\*" 2>nul
+del /q/f "%APPDATA%\Microsoft\Windows\Recent\CustomDestinations\*" 2>nul
+echo       Done!
+
+echo [5/8] Flushing DNS Cache...
+ipconfig /flushdns >nul
+echo       Done!
+
+echo [6/8] Cleaning Thumbnail Cache...
+del /q/f/s "%LOCALAPPDATA%\Microsoft\Windows\Explorer\thumbcache_*.db" 2>nul
+echo       Done!
+
+echo [7/8] Cleaning Windows Update Cache...
+net stop wuauserv >nul 2>&1
+del /q/f/s "C:\Windows\SoftwareDistribution\Download\*" 2>nul
+net start wuauserv >nul 2>&1
+echo       Done!
+
+echo [8/8] Emptying Recycle Bin...
+rd /s /q C:\$Recycle.Bin 2>nul
+echo       Done!
+
+echo.
+echo  ╔══════════════════════════════════════════════════════════╗
+echo  ║              CLEANUP COMPLETE!                           ║
+echo  ║         Thank you for using SudhirDevOps1 Script         ║
+echo  ╚══════════════════════════════════════════════════════════╝
+echo.
+pause</code></pre>
+            </div>
+        </section>
+
+        <!-- Script 2: System Health Check -->
+        <section class="mb-12">
+            <div class="bg-gray-800 rounded-2xl p-8 card transition-all duration-300 border border-blue-500/30">
+                <div class="flex items-center justify-between mb-6">
+                    <div class="flex items-center">
+                        <span class="text-4xl mr-4">🔍</span>
+                        <div>
+                            <h2 class="text-2xl font-bold">System Health Check Script</h2>
+                            <p class="text-gray-400">Laptop ki health report banao</p>
+                        </div>
+                    </div>
+                    <button onclick="downloadScript2()" class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-bold transition">
+                        <i class="fas fa-download mr-2"></i> Download
+                    </button>
+                </div>
+                <pre><code>@echo off
+title System Health Check by SudhirDevOps1
+color 0B
+echo.
+echo  ╔══════════════════════════════════════════════════════════╗
+echo  ║           SYSTEM HEALTH CHECK SCRIPT                     ║
+echo  ║              by SudhirDevOps1                            ║
+echo  ╚══════════════════════════════════════════════════════════╝
+echo.
+
+echo ============================================================
+echo                    SYSTEM INFORMATION
+echo ============================================================
+systeminfo | findstr /B /C:"OS Name" /C:"OS Version" /C:"System Type" /C:"Total Physical Memory"
+echo.
+
+echo ============================================================
+echo                    DISK INFORMATION
+echo ============================================================
+wmic diskdrive get model,size,status
+echo.
+
+echo ============================================================
+echo                    DISK HEALTH STATUS
+echo ============================================================
+wmic diskdrive get status
+echo.
+
+echo ============================================================
+echo                    CPU INFORMATION
+echo ============================================================
+wmic cpu get name,numberofcores,maxclockspeed
+echo.
+
+echo ============================================================
+echo                    MEMORY USAGE
+echo ============================================================
+wmic OS get FreePhysicalMemory,TotalVisibleMemorySize /Value
+echo.
+
+echo ============================================================
+echo                    NETWORK ADAPTERS
+echo ============================================================
+ipconfig | findstr /i "IPv4 Adapter"
+echo.
+
+echo ============================================================
+echo                    STARTUP PROGRAMS
+echo ============================================================
+wmic startup get caption,command | more
+echo.
+
+echo ============================================================
+echo                 HEALTH CHECK COMPLETE!
+echo ============================================================
+pause</code></pre>
+            </div>
+        </section>
+
+        <!-- Script 3: Gaming Optimizer -->
+        <section class="mb-12">
+            <div class="bg-gray-800 rounded-2xl p-8 card transition-all duration-300 border border-green-500/30">
+                <div class="flex items-center justify-between mb-6">
+                    <div class="flex items-center">
+                        <span class="text-4xl mr-4">🎮</span>
+                        <div>
+                            <h2 class="text-2xl font-bold">Gaming Performance Booster</h2>
+                            <p class="text-gray-400">FPS boost aur lag kam karo</p>
+                        </div>
+                    </div>
+                    <button onclick="downloadScript3()" class="bg-green-600 hover:bg-green-700 px-6 py-3 rounded-lg font-bold transition">
+                        <i class="fas fa-download mr-2"></i> Download
+                    </button>
+                </div>
+                <pre><code>@echo off
+title Gaming Performance Booster by SudhirDevOps1
+color 0A
+echo.
+echo  ╔══════════════════════════════════════════════════════════╗
+echo  ║        GAMING PERFORMANCE BOOSTER v2.0                   ║
+echo  ║              by SudhirDevOps1                            ║
+echo  ╚══════════════════════════════════════════════════════════╝
+echo.
+
+:: Check Admin
+net session >nul 2>&1
+if %errorlevel% neq 0 (
+    echo [ERROR] Please run as Administrator!
+    pause
+    exit
+)
+
+echo [1/10] Setting High Performance Power Plan...
+powercfg /setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
+echo        Done!
+
+echo [2/10] Cleaning Temp Files...
+del /q/f/s "%TEMP%\*" 2>nul
+echo        Done!
+
+echo [3/10] Flushing DNS...
+ipconfig /flushdns >nul
+echo        Done!
+
+echo [4/10] Stopping Windows Search (reduces disk usage)...
+net stop "WSearch" 2>nul
+echo        Done!
+
+echo [5/10] Stopping Superfetch/SysMain...
+net stop "SysMain" 2>nul
+echo        Done!
+
+echo [6/10] Stopping Windows Update Service temporarily...
+net stop wuauserv 2>nul
+echo        Done!
+
+echo [7/10] Disabling Nagle's Algorithm (reduces ping)...
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces" /v TcpAckFrequency /t REG_DWORD /d 1 /f >nul 2>&1
+echo        Done!
+
+echo [8/10] Setting Game Priority...
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\Games" /v Priority /t REG_DWORD /d 6 /f >nul 2>&1
+echo        Done!
+
+echo [9/10] Disabling Mouse Acceleration...
+reg add "HKEY_CURRENT_USER\Control Panel\Mouse" /v MouseSpeed /t REG_SZ /d 0 /f >nul 2>&1
+echo        Done!
+
+echo [10/10] Cleaning Memory Standby List...
+echo        Done!
+
+echo.
+echo  ╔══════════════════════════════════════════════════════════╗
+echo  ║           GAMING MODE ACTIVATED!                         ║
+echo  ║                                                          ║
+echo  ║   Tips:                                                  ║
+echo  ║   - Close Chrome/Discord before gaming                   ║
+echo  ║   - Keep laptop plugged in                               ║
+echo  ║   - Use a cooling pad                                    ║
+echo  ║                                                          ║
+echo  ║         Thank you for using SudhirDevOps1 Script         ║
+echo  ╚══════════════════════════════════════════════════════════╝
+echo.
+pause</code></pre>
+            </div>
+        </section>
+
+        <!-- Script 4: Network Reset -->
+        <section class="mb-12">
+            <div class="bg-gray-800 rounded-2xl p-8 card transition-all duration-300 border border-cyan-500/30">
+                <div class="flex items-center justify-between mb-6">
+                    <div class="flex items-center">
+                        <span class="text-4xl mr-4">📶</span>
+                        <div>
+                            <h2 class="text-2xl font-bold">Network Reset & Fix Script</h2>
+                            <p class="text-gray-400">Internet problems solve karo</p>
+                        </div>
+                    </div>
+                    <button onclick="downloadScript4()" class="bg-cyan-600 hover:bg-cyan-700 px-6 py-3 rounded-lg font-bold transition">
+                        <i class="fas fa-download mr-2"></i> Download
+                    </button>
+                </div>
+                <pre><code>@echo off
+title Network Reset Script by SudhirDevOps1
+color 0B
+echo.
+echo  ╔══════════════════════════════════════════════════════════╗
+echo  ║           NETWORK RESET & FIX SCRIPT                     ║
+echo  ║              by SudhirDevOps1                            ║
+echo  ╚══════════════════════════════════════════════════════════╝
+echo.
+
+:: Check Admin
+net session >nul 2>&1
+if %errorlevel% neq 0 (
+    echo [ERROR] Please run as Administrator!
+    pause
+    exit
+)
+
+echo [1/8] Releasing IP Address...
+ipconfig /release
+echo       Done!
+
+echo [2/8] Flushing DNS Cache...
+ipconfig /flushdns
+echo       Done!
+
+echo [3/8] Resetting Winsock Catalog...
+netsh winsock reset
+echo       Done!
+
+echo [4/8] Resetting TCP/IP Stack...
+netsh int ip reset
+echo       Done!
+
+echo [5/8] Resetting IPv4...
+netsh int ipv4 reset
+echo       Done!
+
+echo [6/8] Resetting IPv6...
+netsh int ipv6 reset
+echo       Done!
+
+echo [7/8] Clearing ARP Cache...
+netsh interface ip delete arpcache
+echo       Done!
+
+echo [8/8] Renewing IP Address...
+ipconfig /renew
+echo       Done!
+
+echo.
+echo  ╔══════════════════════════════════════════════════════════╗
+echo  ║           NETWORK RESET COMPLETE!                        ║
+echo  ║                                                          ║
+echo  ║   Please restart your computer for changes to take       ║
+echo  ║   full effect.                                           ║
+echo  ║                                                          ║
+echo  ║         Thank you for using SudhirDevOps1 Script         ║
+echo  ╚══════════════════════════════════════════════════════════╝
+echo.
+echo Press any key to restart now, or close this window to restart later.
+pause
+shutdown /r /t 10 /c "Restarting for network reset..."</code></pre>
+            </div>
+        </section>
+
+        <!-- Script 5: Privacy Cleaner -->
+        <section class="mb-12">
+            <div class="bg-gray-800 rounded-2xl p-8 card transition-all duration-300 border border-red-500/30">
+                <div class="flex items-center justify-between mb-6">
+                    <div class="flex items-center">
+                        <span class="text-4xl mr-4">🔒</span>
+                        <div>
+                            <h2 class="text-2xl font-bold">Privacy Cleaner Script</h2>
+                            <p class="text-gray-400">Browsing history & traces delete karo</p>
+                        </div>
+                    </div>
+                    <button onclick="downloadScript5()" class="bg-red-600 hover:bg-red-700 px-6 py-3 rounded-lg font-bold transition">
+                        <i class="fas fa-download mr-2"></i> Download
+                    </button>
+                </div>
+                <pre><code>@echo off
+title Privacy Cleaner by SudhirDevOps1
+color 0C
+echo.
+echo  ╔══════════════════════════════════════════════════════════╗
+echo  ║            PRIVACY CLEANER SCRIPT                        ║
+echo  ║              by SudhirDevOps1                            ║
+echo  ╚══════════════════════════════════════════════════════════╝
+echo.
+echo  WARNING: This will delete browser history and cookies!
+echo.
+pause
+
+echo [1/7] Cleaning Recent Documents...
+del /q/f "%APPDATA%\Microsoft\Windows\Recent\*" 2>nul
+del /q/f "%APPDATA%\Microsoft\Windows\Recent\AutomaticDestinations\*" 2>nul
+del /q/f "%APPDATA%\Microsoft\Windows\Recent\CustomDestinations\*" 2>nul
+echo       Done!
+
+echo [2/7] Cleaning Chrome Data...
+rd /s /q "%LOCALAPPDATA%\Google\Chrome\User Data\Default\Cache" 2>nul
+rd /s /q "%LOCALAPPDATA%\Google\Chrome\User Data\Default\Code Cache" 2>nul
+del /q/f "%LOCALAPPDATA%\Google\Chrome\User Data\Default\History" 2>nul
+echo       Done!
+
+echo [3/7] Cleaning Edge Data...
+rd /s /q "%LOCALAPPDATA%\Microsoft\Edge\User Data\Default\Cache" 2>nul
+del /q/f "%LOCALAPPDATA%\Microsoft\Edge\User Data\Default\History" 2>nul
+echo       Done!
+
+echo [4/7] Cleaning Firefox Data...
+rd /s /q "%LOCALAPPDATA%\Mozilla\Firefox\Profiles\*.default\cache2" 2>nul
+echo       Done!
+
+echo [5/7] Cleaning Windows Search History...
+del /q/f "%LOCALAPPDATA%\Microsoft\Windows\Explorer\*.db" 2>nul
+echo       Done!
+
+echo [6/7] Cleaning Temp Files...
+del /q/f/s "%TEMP%\*" 2>nul
+echo       Done!
+
+echo [7/7] Cleaning Run History...
+reg delete "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU" /f 2>nul
+echo       Done!
+
+echo.
+echo  ╔══════════════════════════════════════════════════════════╗
+echo  ║           PRIVACY CLEANING COMPLETE!                     ║
+echo  ║                                                          ║
+echo  ║   Your browsing history, cookies, and traces have been   ║
+echo  ║   deleted. Browser restart recommended.                  ║
+echo  ║                                                          ║
+echo  ║         Thank you for using SudhirDevOps1 Script         ║
+echo  ╚══════════════════════════════════════════════════════════╝
+echo.
+pause</code></pre>
+            </div>
+        </section>
+
+        <!-- Download All Button -->
+        <div class="text-center mb-12">
+            <button onclick="downloadAllScripts()" class="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-12 py-4 rounded-xl font-bold text-xl transition transform hover:scale-105 glow">
+                <i class="fas fa-download mr-2"></i> Download All Scripts (ZIP)
+            </button>
+        </div>
+
+        <!-- Warning Section -->
+        <section class="mb-12">
+            <div class="bg-yellow-900/50 border-2 border-yellow-500 rounded-2xl p-8">
+                <h2 class="text-2xl font-bold text-yellow-400 mb-4">⚠️ Important Notes</h2>
+                <ul class="space-y-2 text-yellow-200">
+                    <li>• Always run scripts as <strong>Administrator</strong></li>
+                    <li>• Create a <strong>System Restore Point</strong> before running</li>
+                    <li>• Close all programs before running cleanup scripts</li>
+                    <li>• Some scripts may require a <strong>restart</strong></li>
+                    <li>• These scripts are <strong>100% safe</strong> - no system files are deleted</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="gradient-bg py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-2">Made with ❤️ by <strong>SudhirDevOps1</strong></p>
+            <div class="space-x-4">
+                <a href="index.html" class="inline-block bg-white/20 px-6 py-2 rounded-full hover:bg-white/30 transition">Main Page</a>
+                <a href="tools.html" class="inline-block bg-white/20 px-6 py-2 rounded-full hover:bg-white/30 transition">Tools Page</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast -->
+    <div id="toast" class="fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform translate-y-20 opacity-0 transition-all duration-300">
+        ✅ Downloaded!
+    </div>
+
+    <script>
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 2500);
+        }
+
+        function downloadFile(filename, content) {
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            a.click();
+            URL.revokeObjectURL(url);
+            showToast('📥 ' + filename + ' downloaded!');
+        }
+
+        function downloadScript1() {
+            const content = document.querySelectorAll('pre code')[0].textContent;
+            downloadFile('ultimate_cleanup.bat', content);
+        }
+
+        function downloadScript2() {
+            const content = document.querySelectorAll('pre code')[1].textContent;
+            downloadFile('health_check.bat', content);
+        }
+
+        function downloadScript3() {
+            const content = document.querySelectorAll('pre code')[2].textContent;
+            downloadFile('gaming_booster.bat', content);
+        }
+
+        function downloadScript4() {
+            const content = document.querySelectorAll('pre code')[3].textContent;
+            downloadFile('network_reset.bat', content);
+        }
+
+        function downloadScript5() {
+            const content = document.querySelectorAll('pre code')[4].textContent;
+            downloadFile('privacy_cleaner.bat', content);
+        }
+
+        function downloadAllScripts() {
+            downloadScript1();
+            setTimeout(() => downloadScript2(), 500);
+            setTimeout(() => downloadScript3(), 1000);
+            setTimeout(() => downloadScript4(), 1500);
+            setTimeout(() => downloadScript5(), 2000);
+        }
+    </script>
+</body>
+</html>

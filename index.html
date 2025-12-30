@@ -1,0 +1,2687 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 Laptop Ko Fast Karne Ke Tarike | SudhirDevOps1</title>
+    <meta name="description" content="Windows laptop ko fast karne ke safe tarike by SudhirDevOps1. Temporary files clean, startup optimize, aur performance boost karein!">
+    <meta name="author" content="SudhirDevOps1">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Poppins', sans-serif; }
+        
+        /* Theme Variables */
+        :root {
+            --primary: #667eea;
+            --secondary: #764ba2;
+            --accent: #22d3ee;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+        }
+        
+        .code-block {
+            background: #1e293b;
+            border-radius: 8px;
+            position: relative;
+        }
+        .code-block code {
+            color: #22d3ee;
+        }
+        .copy-btn {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .gradient-bg-2 {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        .gradient-bg-3 {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        .section-card {
+            border-left: 4px solid #667eea;
+        }
+
+
+
+/* Enhanced Cyber-DevOps Animated Background */
+.animated-bg {
+    background: linear-gradient(-45deg, #1db954, #121212, #000000, #9333ea, #0ea5e9);
+    background-size: 400% 400%;
+    animation: gradientBG 15s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    position: relative;
+}
+.animated-bg::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: radial-gradient(rgba(211, 62, 62, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px; /* Dots pattern */
+    pointer-events: none;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+/* --- Optimized Animated Background --- */
+.animated-bg {
+    /* Black ki jagah dark blue/purple mix kiya hai smoother transition ke liye */
+    background: linear-gradient(-45deg, #2cbb6c, #1a1a2e, #16213e, #ac7ee9);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite; /* Speed thodi fast ki hai better feel ke liye */
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* --- Floating & Pulse Fixes --- */
+.float {
+    animation: float 3s ease-in-out infinite;
+    display: inline-block; /* Ensure it moves correctly */
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.8; } /* Scale add kiya hai better effect ke liye */
+}
+
+/* --- Glow Effect (Theme Based) --- */
+.glow {
+    box-shadow: 0 0 15px var(--accent, rgba(102, 126, 234, 0.5));
+}
+
+/* --- Theme Friendly Scrollbar --- */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Scrollbar track ab theme ke hisaab se light/dark hoga */
+::-webkit-scrollbar-track {
+    background: var(--bg-primary, #f1f1f1);
+}
+
+/* Scrollbar thumb accent color ke saath match karega */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, var(--accent, #667eea), var(--secondary, #764ba2));
+    border-radius: 10px;
+    border: 2px solid var(--bg-primary, #f1f1f1); /* Gap for clean look */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent, #667eea);
+}
+
+
+
+
+
+
+        
+        /* Theme Toggle */
+        .dark-mode {
+            --bg-primary: #1a1a2e;
+            --bg-secondary: #16213e;
+            --text-primary: #eee;
+        }
+        
+        body.dark-mode {
+            background-color: #1a1a2e;
+            color: #eee;
+        }
+        
+        body.dark-mode .bg-white {
+            background-color: #16213e !important;
+        }
+        
+        body.dark-mode .text-gray-800 {
+            color: #eee !important;
+        }
+        
+        body.dark-mode .text-gray-700 {
+            color: #ccc !important;
+        }
+        
+        body.dark-mode .bg-gray-100,
+        body.dark-mode .bg-gray-50 {
+            background-color: #1a1a2e !important;
+        }
+        
+        body.dark-mode nav.bg-white {
+            background-color: #16213e !important;
+        }
+
+        /* Print Styles */
+        @media print {
+            .fixed, nav, #backToTop, #tipOfDay, #searchModal { display: none !important; }
+            .animated-bg { background: #667eea !important; animation: none !important; }
+            section { break-inside: avoid; page-break-inside: avoid; }
+            body { font-size: 12px; }
+        }
+
+        /* Keyboard Shortcut Styles */
+        kbd {
+            font-family: 'Consolas', monospace;
+            font-weight: 500;
+        }
+
+        /* Shine effect on hover */
+        .shine-effect {
+            position: relative;
+            overflow: hidden;
+        }
+        .shine-effect::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(to right, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%);
+            transform: rotate(30deg);
+            transition: 0.5s;
+            opacity: 0;
+        }
+        .shine-effect:hover::after {
+            animation: shine 0.7s forwards;
+        }
+        @keyframes shine {
+            0% { left: -100%; opacity: 1; }
+            100% { left: 100%; opacity: 0; }
+        }
+
+        /* Typing animation for header */
+        .typewriter {
+            overflow: hidden;
+            border-right: 3px solid white;
+            animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: white; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Floating Action Buttons -->
+    <div class="fixed top-4 right-4 z-50 flex flex-col space-y-2">
+        <button id="themeToggle" onclick="toggleTheme()" class="bg-white/90 p-3 rounded-full shadow-lg hover:scale-110 transition-transform" title="Dark/Light Mode">
+            <span id="themeIcon">🌙</span>
+        </button>
+        <button onclick="openSearch()" class="bg-white/90 p-3 rounded-full shadow-lg hover:scale-110 transition-transform" title="Search Commands">
+            <span>🔍</span>
+        </button>
+        <button onclick="printPage()" class="bg-white/90 p-3 rounded-full shadow-lg hover:scale-110 transition-transform" title="Print Page">
+            <span>🖨️</span>
+        </button>
+    </div>
+
+    <!-- Search Modal -->
+    <div id="searchModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-[60] hidden flex items-start justify-center pt-20">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-2xl mx-4 overflow-hidden">
+            <div class="p-4 border-b flex items-center">
+                <span class="text-2xl mr-3">🔍</span>
+                <input type="text" id="searchInput" placeholder="Search commands... (e.g., temp, dns, startup)" 
+                    class="flex-1 text-lg outline-none" onkeyup="searchCommands(this.value)">
+                <button onclick="closeSearch()" class="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+            </div>
+            <div id="searchResults" class="max-h-96 overflow-y-auto p-4">
+                <p class="text-gray-500 text-center py-8">Type to search commands...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Command of the Day Popup -->
+    <div id="tipOfDay" class="fixed bottom-24 left-4 z-50 bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4 rounded-xl shadow-2xl max-w-sm transform translate-y-full opacity-0 transition-all duration-500">
+        <div class="flex items-start">
+            <span class="text-3xl mr-3">💡</span>
+            <div class="flex-1">
+                <h4 class="font-bold">Tip of the Day!</h4>
+                <p id="tipContent" class="text-sm mt-1 opacity-90"></p>
+                <button onclick="closeTip()" class="mt-2 text-xs bg-white/20 px-3 py-1 rounded-full hover:bg-white/30">Got it!</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header --><header class="animated-bg text-white py-20 relative overflow-hidden">
+    <div class="container mx-auto px-4 text-center">
+        <div class="animate-bounce inline-block mb-4">
+            <span class="text-6xl">🚀</span>
+        </div>
+        
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">Laptop Ko Fast Karne Ke Tarike</h1>
+        <p class="text-xl md:text-2xl opacity-90 mb-2">Windows ke liye 100% Safe Methods</p>
+        
+        <div class="mt-6 inline-flex items-center bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full glow">
+            <span class="text-green-300 mr-2 text-xl">✅</span>
+            <span class="font-medium">Koi System File Delete Nahi Hogi</span>
+        </div>
+        
+        <div class="mt-8 flex flex-wrap justify-center items-center gap-4">
+            <div class="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full flex items-center space-x-3 border border-white/20">
+                <img src="https://github.com/SudhirDevOps1.png" alt="SudhirDevOps1" class="w-15 h-15 rounded-full border-2 border-white" onerror="this.src='https://ui-avatars.com/api/?name=Sudhir+DevOps&background=667eea&color=fff'">
+                <div class="text-left">
+                    <p class="text-xs opacity-75 leading-tight">Created by</p>
+                    <p class="font-bold leading-none">SudhirDevOps1</p>
+                </div>
+            </div>
+            <a href="https://github.com/SudhirDevOps1" target="_blank" class="bg-white/20 hover:bg-white/30 px-6 py-3 rounded-full transition-all flex items-center space-x-2 border border-white/10">
+                <span>⭐</span>
+                <span>GitHub</span>
+            </a>
+        </div>
+        
+<div class="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 max-w-6xl mx-auto gap-4 text-center">
+    <div class="bg-white/10 backdrop-blur-sm p-4 rounded-2xl border border-white/10">
+        <p class="text-3xl font-bold" data-count="75">75+</p>
+        <p class="text-sm opacity-75 uppercase tracking-wider">Commands</p>
+    </div>
+    
+    <div class="bg-white/10 backdrop-blur-sm p-4 rounded-2xl border border-white/10">
+        <p class="text-3xl font-bold" data-count="25">25+</p>
+        <p class="text-sm opacity-75 uppercase tracking-wider">Sections</p>
+    </div>
+
+    <div class="bg-white/10 backdrop-blur-sm p-4 rounded-2xl border border-white/10">
+        <p class="text-3xl font-bold" data-count="100">100%</p>
+        <p class="text-sm opacity-75 uppercase tracking-wider">Safe</p>
+    </div>
+
+    <div class="bg-white/10 backdrop-blur-sm p-4 rounded-2xl border border-white/10">
+        <p class="text-3xl font-bold" data-count="15">15GB+</p>
+        <p class="text-sm opacity-75 uppercase tracking-wider">Free Space</p>
+    </div>
+
+    <div class="bg-white/10 backdrop-blur-sm p-4 rounded-2xl border border-white/10 col-span-2 sm:col-span-1">
+        <p class="text-3xl font-bold" data-count="6">6+</p>
+        <p class="text-sm opacity-75 uppercase tracking-wider">Explore More</p>
+    </div>
+</div>
+        <div class="mt-16">
+            <h3 class="text-lg font-semibold mb-6 flex items-center justify-center space-x-2">
+                <span class="w-8 h-[1px] bg-white/30"></span>
+                <span class="uppercase tracking-widest text-sm opacity-80">Explore More</span>
+                <span class="w-8 h-[1px] bg-white/30"></span>
+            </h3>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="tools.html" class="px-5 py-2.5 bg-gradient-to-r from-pink-500 to-rose-500 text-white rounded-xl hover:scale-105 transition-all font-bold shadow-lg">🛠️ Extra Tools</a>
+                <a href="scripts.html" class="px-5 py-2.5 bg-gradient-to-r from-purple-500 to-indigo-500 text-white rounded-xl hover:scale-105 transition-all font-bold shadow-lg">📜 Scripts</a>
+                <a href="troubleshoot.html" class="px-5 py-2.5 bg-gradient-to-r from-green-500 to-teal-500 text-white rounded-xl hover:scale-105 transition-all font-bold shadow-lg">🔧 Troubleshoot</a>
+                <a href="benchmark.html" class="px-5 py-2.5 bg-gradient-to-r from-orange-500 to-amber-500 text-white rounded-xl hover:scale-105 transition-all font-bold shadow-lg">📊 Benchmark</a>
+                <a href="software.html" class="px-5 py-2.5 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-xl hover:scale-105 transition-all font-bold shadow-lg">💿 Software</a>
+                <a href="upgrade.html" class="px-5 py-2.5 bg-gradient-to-r from-emerald-500 to-green-500 text-white rounded-xl hover:scale-105 transition-all font-bold shadow-lg">🔧 Upgrade</a>
+            </div>
+        </div>
+    </div>
+</header>
+    
+
+    <!-- Quick Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-4 overflow-x-auto">
+            <div class="flex space-x-3 min-w-max">
+                <span class="text-gray-300">|</span>
+                <a href="#temp" class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full hover:bg-purple-200 hover:scale-105 transition-all">🗑️ %temp%</a>
+                <a href="#prefetch" class="px-4 py-2 bg-blue-100 text-blue-700 rounded-full hover:bg-blue-200 hover:scale-105 transition-all">📂 Prefetch</a>
+                <a href="#diskcleanup" class="px-4 py-2 bg-green-100 text-green-700 rounded-full hover:bg-green-200 hover:scale-105 transition-all">🧹 Cleanup</a>
+                <a href="#dns" class="px-4 py-2 bg-yellow-100 text-yellow-700 rounded-full hover:bg-yellow-200 hover:scale-105 transition-all">🌐 DNS</a>
+                <a href="#startup" class="px-4 py-2 bg-red-100 text-red-700 rounded-full hover:bg-red-200 hover:scale-105 transition-all">⚡ Startup</a>
+                <a href="#hardware" class="px-4 py-2 bg-orange-100 text-orange-700 rounded-full hover:bg-orange-200 hover:scale-105 transition-all">💽 Hardware</a>
+                <a href="#monitoring" class="px-4 py-2 bg-pink-100 text-pink-700 rounded-full hover:bg-pink-200 hover:scale-105 transition-all">📈 Monitor</a>
+                <a href="#network" class="px-4 py-2 bg-cyan-100 text-cyan-700 rounded-full hover:bg-cyan-200 hover:scale-105 transition-all">📶 Network</a>
+                <a href="#hidden-tools" class="px-4 py-2 bg-violet-100 text-violet-700 rounded-full hover:bg-violet-200 hover:scale-105 transition-all">🔮 Hidden</a>
+                <a href="#script" class="px-4 py-2 bg-indigo-100 text-indigo-700 rounded-full hover:bg-indigo-200 hover:scale-105 transition-all">🚀 Script</a>
+                <a href="#checklist" class="px-4 py-2 bg-emerald-100 text-emerald-700 rounded-full hover:bg-emerald-200 hover:scale-105 transition-all">✅ Tracker</a>
+                <a href="#shortcuts" class="px-4 py-2 bg-violet-100 text-violet-700 rounded-full hover:bg-violet-200 hover:scale-105 transition-all">⌨️ Shortcuts</a>
+                <a href="#gaming" class="px-4 py-2 bg-green-100 text-green-700 rounded-full hover:bg-green-200 hover:scale-105 transition-all">🎮 Gaming</a>
+                <a href="#privacy" class="px-4 py-2 bg-red-100 text-red-700 rounded-full hover:bg-red-200 hover:scale-105 transition-all">🔒 Privacy</a>
+                <a href="#tools" class="px-4 py-2 bg-amber-100 text-amber-700 rounded-full hover:bg-amber-200 hover:scale-105 transition-all">🛠️ Tools</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-12">
+        
+        <!-- Section 1: %temp% -->
+        <section id="temp" class="mb-12">
+            <div class="bg-white rounded-2xl shadow-lg p-8 section-card card transition-all duration-300">
+                <div class="flex items-center mb-6">
+                    <span class="text-4xl mr-4">🗑️</span>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800">1. %temp% Folder Clean Karna</h2>
+                        <p class="text-gray-500">Temporary Files Delete Karo</p>
+                    </div>
+                </div>
+
+                <!-- Explanation -->
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6 rounded-r-lg">
+                    <h3 class="font-semibold text-blue-800 mb-2">🤔 Ye Kya Hota Hai?</h3>
+                    <p class="text-gray-700"><code class="bg-blue-100 px-2 py-1 rounded">%temp%</code> ek environment variable hai jo temporary files folder ko point karta hai. Jab bhi aap koi software install karte ho, ya koi program run karta hai, wo apni temporary files yahan store karta hai.</p>
+                    <p class="text-gray-600 mt-2"><strong>Location:</strong> <code class="bg-gray-200 px-2 py-1 rounded">C:\Users\YourUsername\AppData\Local\Temp</code></p>
+                </div>
+
+                <!-- What files -->
+                <div class="bg-purple-50 p-4 rounded-lg mb-6">
+                    <h3 class="font-semibold text-purple-800 mb-2">📁 Isme Kya Files Hoti Hain?</h3>
+                    <ul class="grid grid-cols-2 gap-2 text-gray-700">
+                        <li>• Software installation temp files</li>
+                        <li>• Browser downloads ke temp files</li>
+                        <li>• Application cache files</li>
+                        <li>• Log files</li>
+                    </ul>
+                </div>
+
+                <!-- Method 1 -->
+                <div class="mb-6">
+                    <h3 class="font-semibold text-gray-800 mb-3">✅ Method 1: Run Dialog</h3>
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <div class="flex items-center space-x-2 mb-2">
+                            <span class="bg-purple-500 text-white px-3 py-1 rounded-full text-sm">Step 1</span>
+                            <span>Windows + R press karo</span>
+                        </div>
+                        <div class="flex items-center space-x-2 mb-2">
+                            <span class="bg-purple-500 text-white px-3 py-1 rounded-full text-sm">Step 2</span>
+                            <span>Type karo: <code class="bg-yellow-200 px-2 py-1 rounded font-bold">%temp%</code></span>
+                        </div>
+                        <div class="flex items-center space-x-2 mb-2">
+                            <span class="bg-purple-500 text-white px-3 py-1 rounded-full text-sm">Step 3</span>
+                            <span>Enter press karo</span>
+                        </div>
+                        <div class="flex items-center space-x-2 mb-2">
+                            <span class="bg-purple-500 text-white px-3 py-1 rounded-full text-sm">Step 4</span>
+                            <span>Ctrl + A (Select All)</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="bg-purple-500 text-white px-3 py-1 rounded-full text-sm">Step 5</span>
+                            <span>Shift + Delete (Permanent Delete)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Method 2 CMD -->
+                <div class="mb-6">
+                    <h3 class="font-semibold text-gray-800 mb-3">✅ Method 2: Command Prompt (CMD)</h3>
+                    <div class="code-block p-4">
+                        <code class="text-lg">del /q/f/s %TEMP%\*</code>
+                        <button onclick="copyCode(this, 'del /q/f/s %TEMP%\\*')" class="copy-btn bg-white/20 hover:bg-white/30 text-white px-3 py-1 rounded text-sm transition">📋 Copy</button>
+                    </div>
+                </div>
+
+                <!-- Command Explanation -->
+                <div class="bg-gray-800 text-white p-4 rounded-lg mb-6">
+                    <h3 class="font-semibold mb-3">🔍 Command Explanation:</h3>
+                    <table class="w-full">
+                        <tr class="border-b border-gray-600">
+                            <td class="py-2 text-cyan-400 font-mono">/q</td>
+                            <td class="py-2">Quiet mode - confirmation nahi mangega</td>
+                        </tr>
+                        <tr class="border-b border-gray-600">
+                            <td class="py-2 text-cyan-400 font-mono">/f</td>
+                            <td class="py-2">Force delete - read-only files bhi delete</td>
+                        </tr>
+                        <tr>
+                            <td class="py-2 text-cyan-400 font-mono">/s</td>
+                            <td class="py-2">Subfolders mein bhi delete kare</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <!-- Result -->
+                <div class="bg-green-50 border border-green-200 p-4 rounded-lg flex items-center">
+                    <span class="text-3xl mr-4">⚡</span>
+                    <div>
+                        <h4 class="font-semibold text-green-800">Expected Result:</h4>
+                        <p class="text-green-700">500MB se 5GB tak space free ho sakti hai!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Prefetch -->
+        <section id="prefetch" class="mb-12">
+            <div class="bg-white rounded-2xl shadow-lg p-8 section-card card transition-all duration-300">
+                <div class="flex items-center mb-6">
+                    <span class="text-4xl mr-4">📂</span>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800">2. Prefetch Folder Clean Karna</h2>
+                        <p class="text-gray-500">Program Loading Data Clean Karo</p>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6 rounded-r-lg">
+                    <h3 class="font-semibold text-blue-800 mb-2">🤔 Ye Kya Hota Hai?</h3>
+                    <p class="text-gray-700">Prefetch folder mein Windows apne frequently used programs ki <strong>loading information</strong> store karta hai taaki wo jaldi open ho sakein. Par overtime ye folder bada ho jata hai.</p>
+                    <p class="text-gray-600 mt-2"><strong>Location:</strong> <code class="bg-gray-200 px-2 py-1 rounded">C:\Windows\Prefetch</code></p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <h3 class="font-semibold text-gray-800 mb-3">✅ Method 1: Run Dialog</h3>
+                        <div class="bg-gray-100 p-4 rounded-lg h-full">
+                            <p class="mb-2">1. <kbd class="bg-gray-300 px-2 py-1 rounded">Win + R</kbd> press karo</p>
+                            <p class="mb-2">2. Type: <code class="bg-yellow-200 px-2 py-1 rounded font-bold">prefetch</code></p>
+                            <p class="mb-2">3. Admin permission do (Yes click karo)</p>
+                            <p>4. <kbd class="bg-gray-300 px-2 py-1 rounded">Ctrl + A</kbd> → <kbd class="bg-gray-300 px-2 py-1 rounded">Shift + Del</kbd></p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-800 mb-3">✅ Method 2: CMD (Admin)</h3>
+                        <div class="code-block p-4 h-full flex items-center">
+                            <code>del /q/s C:\Windows\Prefetch\*</code>
+                            <button onclick="copyCode(this, 'del /q/s C:\\Windows\\Prefetch\\*')" class="copy-btn bg-white/20 hover:bg-white/30 text-white px-3 py-1 rounded text-sm transition">📋</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded-r-lg">
+                    <h4 class="font-semibold text-yellow-800">⚠️ Note:</h4>
+                    <p class="text-yellow-700">Pehli baar programs thoda slow open honge, fir Windows naye prefetch files bana lega. Ye 100% safe hai!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Disk Cleanup -->
+        <section id="diskcleanup" class="mb-12">
+            <div class="bg-white rounded-2xl shadow-lg p-8 section-card card transition-all duration-300">
+                <div class="flex items-center mb-6">
+                    <span class="text-4xl mr-4">🧹</span>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800">3. Disk Cleanup Tool</h2>
+                        <p class="text-gray-500">Windows Ka Built-in Cleaning Tool</p>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6 rounded-r-lg">
+                    <h3 class="font-semibold text-blue-800 mb-2">🤔 Ye Kya Hota Hai?</h3>
+                    <p class="text-gray-700">Windows ka official built-in tool hai jo safely junk files delete karta hai. Microsoft ne banaya hai toh 100% safe hai!</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <h3 class="font-semibold text-gray-800 mb-3">✅ Run Dialog Method</h3>
+                        <div class="bg-gray-100 p-4 rounded-lg">
+                            <p class="mb-2">1. <kbd class="bg-gray-300 px-2 py-1 rounded">Win + R</kbd> press karo</p>
+                            <p class="mb-2">2. Type: <code class="bg-yellow-200 px-2 py-1 rounded font-bold">cleanmgr</code></p>
+                            <p class="mb-2">3. Drive select karo (usually C:)</p>
+                            <p class="mb-2">4. Checkboxes select karo</p>
+                            <p>5. OK click karo</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-800 mb-3">✅ CMD Auto Cleanup</h3>
+                        <div class="code-block p-4 mb-4">
+                            <code>cleanmgr /d C: /verylowdisk</code>
+                            <button onclick="copyCode(this, 'cleanmgr /d C: /verylowdisk')" class="copy-btn bg-white/20 hover:bg-white/30 text-white px-3 py-1 rounded text-sm transition">📋</button>
+                        </div>
+                        <div class="bg-green-100 p-3 rounded-lg">
+                            <p class="text-green-800 text-sm">Ye command automatically maximum cleanup karega!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-purple-50 p-4 rounded-lg">
+                    <h3 class="font-semibold text-purple-800 mb-3">📋 Kya Clean Hota Hai:</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+                        <span class="bg-white px-3 py-2 rounded shadow-sm">✅ Temporary Internet Files</span>
+                        <span class="bg-white px-3 py-2 rounded shadow-sm">✅ Downloaded Program Files</span>
+                        <span class="bg-white px-3 py-2 rounded shadow-sm">✅ Recycle Bin</span>
+                        <span class="bg-white px-3 py-2 rounded shadow-sm">✅ Temporary Files</span>
+                        <span class="bg-white px-3 py-2 rounded shadow-sm">✅ Thumbnails</span>
+                        <span class="bg-white px-3 py-2 rounded shadow-sm">✅ Old Windows Updates</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Recent Files -->
+        <section id="recent" class="mb-12">
+            <div class="bg-white rounded-2xl shadow-lg p-8 section-card card transition-all duration-300">
+                <div class="flex items-center mb-6">
+                    <span class="text-4xl mr-4">📄</span>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800">4. Recent Files Clear Karna</h2>
+                        <p class="text-gray-500">Privacy + Speed Dono Improve</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="font-semibold text-gray-800 mb-3">✅ Run Dialog</h3>
+                        <div class="bg-gray-100 p-4 rounded-lg">
+                            <p class="mb-2">1. <kbd class="bg-gray-300 px-2 py-1 rounded">Win + R</kbd></p>
+                            <p class="mb-2">2. Type: <code class="bg-yellow-200 px-2 py-1 rounded font-bold">recent</code></p>
+                            <p>3. <kbd class="bg-gray-300 px-2 py-1 rounded">Ctrl + A</kbd> → Delete</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-800 mb-3">✅ CMD Command</h3>
+                        <div class="code-block p-4">
+                            <code>del /q/f %APPDATA%\Microsoft\Windows\Recent\*</code>
+                            <button onclick="copyCode(this, 'del /q/f %APPDATA%\\Microsoft\\Windows\\Recent\\*')" class="copy-btn bg-white/20 hover:bg-white/30 text-white px-3 py-1 rounded text-sm transition">📋</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: DNS Flush -->
+        <section id="dns" class="mb-12">
+            <div class="bg-white rounded-2xl shadow-lg p-8 section-card card transition-all duration-300">
+                <div class="flex items-center mb-6">
+                    <span class="text-4xl mr-4">🌐</span>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800">5. DNS Cache Flush Karna</h2>
+                        <p class="text-gray-500">Internet Speed Fast Karo</p>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6 rounded-r-lg">
+                    <h3 class="font-semibold text-blue-800 mb-2">🤔 Ye Kya Hota Hai?</h3>
+                    <p class="text-gray-700">DNS Cache mein website addresses ki information store hoti hai. Kabhi kabhi ye corrupt ho jati hai aur internet slow lagta hai.</p>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="font-semibold text-gray-800 mb-3">✅ Command (Admin CMD):</h3>
+                    <div class="code-block p-4">
+                        <code class="text-xl">ipconfig /flushdns</code>
+                        <button onclick="copyCode(this, 'ipconfig /flushdns')" class="copy-btn bg-white/20 hover:bg-white/30 text-white px-3 py-1 rounded text-sm transition">📋 Copy</button>
+                    </div>
+                </div>
+
+                <div class="bg-gray-800 text-white p-4 rounded-lg mb-6">
+                    <h4 class="text-gray-400 mb-2">Expected Output:</h4>
+                    <code class="text-green-400">
+                        Windows IP Configuration<br>
+                        Successfully flushed the DNS Resolver Cache.
+                    </code>
+                </div>
+
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="bg-green-50 p-4 rounded-lg text-center">
+                        <span class="text-2xl">🚀</span>
+                        <p class="text-green-800 font-medium mt-2">Faster Browsing</p>
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded-lg text-center">
+                        <span class="text-2xl">🔧</span>
+                        <p class="text-blue-800 font-medium mt-2">Fix Website Issues</p>
+                    </div>
+                    <div class="bg-purple-50 p-4 rounded-lg text-center">
+                        <span class="text-2xl">🛡️</span>
+                        <p class="text-purple-800 font-medium mt-2">Network Problems Solve</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Startup Programs -->
+        <section id="startup" class="mb-12">
+            <div class="bg-white rounded-2xl shadow-lg p-8 section-card card transition-all duration-300">
+                <div class="flex items-center mb-6">
+                    <span class="text-4xl mr-4">⚡</span>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800">6. Startup Programs Disable Karna</h2>
+                        <p class="text-gray-500">Boot Time Kam Karo</p>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6 rounded-r-lg">
+                    <h3 class="font-semibold text-blue-800 mb-2">🤔 Ye Kya Hota Hai?</h3>
+                    <p class="text-gray-700">Bahut saare programs Windows ke saath start hote hain jo boot time slow karte hain. Inhe disable karne se laptop jaldi on hoga!</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <h3 class="font-semibold text-gray-800 mb-3">✅ Task Manager Method</h3>
+                        <div class="bg-gray-100 p-4 rounded-lg">
+                            <p class="mb-2">1. <kbd class="bg-gray-300 px-2 py-1 rounded">Ctrl + Shift + Esc</kbd></p>
+                            <p class="mb-2">2. "Startup" tab pe jao</p>
+                            <p class="mb-2">3. Unwanted program pe Right Click</p>
+                            <p>4. "Disable" select karo</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-800 mb-3">✅ msconfig Method</h3>
+                        <div class="bg-gray-100 p-4 rounded-lg">
+                            <p class="mb-2">1. <kbd class="bg-gray-300 px-2 py-1 rounded">Win + R</kbd></p>
+                            <p class="mb-2">2. Type: <code class="bg-yellow-200 px-2 py-1 rounded font-bold">msconfig</code></p>
+                            <p class="mb-2">3. "Startup" tab pe jao</p>
+                            <p>4. "Open Task Manager" click karo</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-red-50 border border-red-200 p-4 rounded-lg">
+                        <h4 class="font-semibold text-red-800 mb-3">❌ Kya Disable Karein:</h4>
+                        <ul class="text-red-700 space-y-1">
+                            <li>• Spotify</li>
+                            <li>• Discord</li>
+                            <li>• Adobe Updater</li>
+                            <li>• Steam / Epic Games</li>
+                            <li>• OneDrive (agar use nahi karte)</li>
+                        </ul>
+                    </div>
+                    <div class="bg-green-50 border border-green-200 p-4 rounded-lg">
+                        <h4 class="font-semibold text-green-800 mb-3">✅ Kya Disable NA Karein:</h4>
+                        <ul class="text-green-700 space-y-1">
+                            <li>• Antivirus</li>
+                            <li>• Windows Security</li>
+                            <li>• Audio Drivers</li>
+                            <li>• Graphics Drivers</li>
+                            <li>• Realtek Audio</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Defragmentation -->
+        <section id="defrag" class="mb-12">
+            <div class="bg-white rounded-2xl shadow-lg p-8 section-card card transition-all duration-300">
+                <div class="flex items-center mb-6">
+                    <span class="text-4xl mr-4">💾</span>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800">7. Disk Defragmentation</h2>
+                        <p class="text-gray-500">HDD Ko Optimize Karo</p>
+                    </div>
+                </div>
+
+                <div class="bg-red-50 border-l-4 border-red-500 p-4 mb-6 rounded-r-lg">
+                    <h3 class="font-semibold text-red-800 mb-2">⚠️ Important Warning!</h3>
+                    <p class="text-red-700"><strong>SSD ke liye defrag MAT karo!</strong> Ye sirf HDD (Hard Disk Drive) ke liye hai. SSD mein defrag karne se uski life kam hoti hai.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="font-semibold text-gray-800 mb-3">✅ Run Dialog</h3>
+                        <div class="bg-gray-100 p-4 rounded-lg">
+                            <p class="mb-2">1. <kbd class="bg-gray-300 px-2 py-1 rounded">Win + R</kbd></p>
+                            <p class="mb-2">2. Type: <code class="bg-yellow-200 px-2 py-1 rounded font-bold">dfrgui</code></p>
+                            <p class="mb-2">3. Drive select karo</p>
+                            <p>4. "Optimize" click karo</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-800 mb-3">✅ CMD Command (Admin)</h3>
+                        <div class="code-block p-4">
+                            <code>defrag C: /O</code>
+                            <button onclick="copyCode(this, 'defrag C: /O')" class="copy-btn bg-white/20 hover:bg-white/30 text-white px-3 py-1 rounded text-sm transition">📋</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: Windows Temp -->
+        <section id="wintemp" class="mb-12">
+            <div class="bg-white rounded-2xl shadow-lg p-8 section-card card transition-all duration-300">
+                <div class="flex items-center mb-6">
+                    <span class="text-4xl mr-4">🪟</span>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800">8. Windows Temp Folder</h2>
+                        <p class="text-gray-500">System-Wide Temp Files</p>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6 rounded-r-lg">
+                    <p class="text-gray-700">Ye <code class="bg-blue-100 px-2 py-1 rounded">%temp%</code> se alag hai. Ye system-wide temporary folder hai.</p>
+                    <p class="text-gray-600 mt-2"><strong>Location:</strong> <code class="bg-gray-200 px-2 py-1 rounded">C:\Windows\Temp</code></p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="font-semibold text-gray-800 mb-3">✅ Run Dialog</h3>
+                        <div class="bg-gray-100 p-4 rounded-lg">
+                            <p class="mb-2">1. <kbd class="bg-gray-300 px-2 py-1 rounded">Win + R</kbd></p>
+                            <p class="mb-2">2. Type: <code class="bg-yellow-200 px-2 py-1 rounded font-bold">C:\Windows\Temp</code></p>
+                            <p>3. <kbd class="bg-gray-300 px-2 py-1 rounded">Ctrl + A</kbd> → Delete</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-800 mb-3">✅ CMD (Admin)</h3>
+                        <div class="code-block p-4">
+                            <code>del /q/f/s C:\Windows\Temp\*</code>
+                            <button onclick="copyCode(this, 'del /q/f/s C:\\Windows\\Temp\\*')" class="copy-btn bg-white/20 hover:bg-white/30 text-white px-3 py-1 rounded text-sm transition">📋</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 9: Browser Cache -->
+        <section id="browser" class="mb-12">
+            <div class="bg-white rounded-2xl shadow-lg p-8 section-card card transition-all duration-300">
+                <div class="flex items-center mb-6">
+                    <span class="text-4xl mr-4">🌍</span>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800">9. Browser Cache Clear Karna</h2>
+                        <p class="text-gray-500">Browser Ko Fast Karo</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-blue-50 p-6 rounded-xl text-center">
+                        <img src="https://www.google.com/chrome/static/images/chrome-logo.svg" alt="Chrome" class="w-16 h-16 mx-auto mb-4">
+                        <h3 class="font-bold text-blue-800 mb-3">Chrome</h3>
+                        <kbd class="bg-blue-200 px-3 py-2 rounded">Ctrl + Shift + Delete</kbd>
+                        <p class="text-sm text-gray-600 mt-3">Time Range: All Time<br>→ Cached images and files ✅<br>→ Clear Data</p>
+                    </div>
+                    <div class="bg-blue-50 p-6 rounded-xl text-center">
+                        <span class="text-5xl">🌐</span>
+                        <h3 class="font-bold text-blue-800 mb-3 mt-2">Edge</h3>
+                        <kbd class="bg-blue-200 px-3 py-2 rounded">Ctrl + Shift + Delete</kbd>
+                        <p class="text-sm text-gray-600 mt-3">Same as Chrome<br>→ Select all options<br>→ Clear Now</p>
+                    </div>
+                    <div class="bg-orange-50 p-6 rounded-xl text-center">
+                        <span class="text-5xl">🦊</span>
+                        <h3 class="font-bold text-orange-800 mb-3 mt-2">Firefox</h3>
+                        <kbd class="bg-orange-200 px-3 py-2 rounded">Ctrl + Shift + Delete</kbd>
+                        <p class="text-sm text-gray-600 mt-3">Everything select karo<br>→ Clear Now</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 10: Batch Script -->
+        <section id="script" class="mb-12">
+            <div class="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl shadow-lg p-8 text-white">
+                <div class="flex items-center mb-6">
+                    <span class="text-4xl mr-4">🚀</span>
+                    <div>
+                        <h2 class="text-2xl font-bold">10. Quick Cleanup Batch Script</h2>
+                        <p class="opacity-80">Ek Click Mein Sab Clean!</p>
+                    </div>
+                </div>
+
+                <div class="bg-black/30 rounded-xl p-6 mb-6 overflow-x-auto">
+                    <pre class="text-green-300 text-sm"><code>@echo off
+echo ========================================
+echo    LAPTOP CLEANUP SCRIPT
+echo    Safe Cleanup - No System Files
+echo ========================================
+echo.
+
+echo [1/5] Cleaning User Temp Files...
+del /q/f/s "%TEMP%\*" 2>nul
+echo Done!
+
+echo [2/5] Cleaning Windows Temp...
+del /q/f/s "C:\Windows\Temp\*" 2>nul
+echo Done!
+
+echo [3/5] Cleaning Prefetch...
+del /q/f/s "C:\Windows\Prefetch\*" 2>nul
+echo Done!
+
+echo [4/5] Cleaning Recent Files...
+del /q/f "%APPDATA%\Microsoft\Windows\Recent\*" 2>nul
+echo Done!
+
+echo [5/5] Flushing DNS Cache...
+ipconfig /flushdns
+echo Done!
+
+echo.
+echo ========================================
+echo    CLEANUP COMPLETE! 
+echo ========================================
+pause</code></pre>
+                </div>
+
+                <div class="bg-white/20 rounded-xl p-6">
+                    <h3 class="font-bold mb-4">📝 Kaise Use Karein:</h3>
+                    <div class="grid md:grid-cols-4 gap-4 text-center">
+                        <div class="bg-white/10 p-4 rounded-lg">
+                            <span class="text-3xl">1️⃣</span>
+                            <p class="mt-2">Notepad open karo</p>
+                        </div>
+                        <div class="bg-white/10 p-4 rounded-lg">
+                            <span class="text-3xl">2️⃣</span>
+                            <p class="mt-2">Code paste karo</p>
+                        </div>
+                        <div class="bg-white/10 p-4 rounded-lg">
+                            <span class="text-3xl">3️⃣</span>
+                            <p class="mt-2">Save as <strong>cleanup.bat</strong></p>
+                        </div>
+                        <div class="bg-white/10 p-4 rounded-lg">
+                            <span class="text-3xl">4️⃣</span>
+                            <p class="mt-2">Right Click → Run as Admin</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button onclick="downloadScript()" class="mt-6 bg-white text-purple-600 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition flex items-center mx-auto">
+                    <span class="mr-2">📥</span> Download Script
+                </button>
+            </div>
+        </section>
+
+        <!-- Section 11: Visual Effects Optimization -->
+        <section id="visual" class="mb-12">
+            <div class="bg-white rounded-2xl shadow-lg p-8 section-card card transition-all duration-300">
+                <div class="flex items-center mb-6">
+                    <span class="text-4xl mr-4">🎨</span>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800">11. Visual Effects Disable Karna</h2>
+                        <p class="text-gray-500">Animations Hatao, Speed Badhao</p>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6 rounded-r-lg">
+                    <h3 class="font-semibold text-blue-800 mb-2">🤔 Ye Kya Hota Hai?</h3>
+                    <p class="text-gray-700">Windows mein bahut saari animations hoti hain (minimize/maximize effects, shadows, etc.) jo RAM aur CPU use karti hain. Inhe disable karne se laptop tez ho jayega!</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <h3 class="font-semibold text-gray-800 mb-3">✅ Method 1: System Properties</h3>
+                        <div class="bg-gray-100 p-4 rounded-lg">
+                            <p class="mb-2">1. <kbd class="bg-gray-300 px-2 py-1 rounded">Win + R</kbd></p>
+                            <p class="mb-2">2. Type: <code class="bg-yellow-200 px-2 py-1 rounded font-bold">sysdm.cpl</code></p>
+                            <p class="mb-2">3. Advanced tab → Performance Settings</p>
+                            <p class="mb-2">4. "Adjust for best performance" select karo</p>
+                            <p>5. Apply → OK</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-800 mb-3">✅ Recommended Settings</h3>
+                        <div class="bg-green-50 p-4 rounded-lg">
+                            <p class="text-sm text-gray-700 mb-2">Sirf ye 3 enable rakho:</p>
+                            <ul class="text-green-700 space-y-1">
+                                <li>☑️ Show thumbnails instead of icons</li>
+                                <li>☑️ Smooth edges of screen fonts</li>
+                                <li>☑️ Use visual styles on windows</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-purple-50 p-4 rounded-lg">
+                    <h4 class="font-semibold text-purple-800 mb-2">⚡ Performance Boost:</h4>
+                    <div class="flex items-center justify-around">
+                        <div class="text-center">
+                            <span class="text-3xl">📉</span>
+                            <p class="text-sm font-medium">RAM -15%</p>
+                        </div>
+                        <div class="text-center">
+                            <span class="text-3xl">🚀</span>
+                            <p class="text-sm font-medium">Speed +20%</p>
+                        </div>
+                        <div class="text-center">
+                            <span class="text-3xl">🔋</span>
+                            <p class="text-sm font-medium">Battery +10%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 12: Power Plan -->
+        <section id="power" class="mb-12">
+            <div class="bg-white rounded-2xl shadow-lg p-8 section-card card transition-all duration-300">
+                <div class="flex items-center mb-6">
+                    <span class="text-4xl mr-4">🔋</span>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800">12. Power Plan Optimization</h2>
+                        <p class="text-gray-500">Maximum Performance Enable Karo</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-4 mb-6">
+                    <div class="bg-green-50 p-4 rounded-lg border-2 border-green-300">
+                        <h4 class="font-bold text-green-800">🔌 Plugged In</h4>
+                        <p class="text-green-700 text-sm mt-2">High Performance use karo</p>
+                    </div>
+                    <div class="bg-yellow-50 p-4 rounded-lg border-2 border-yellow-300">
+                        <h4 class="font-bold text-yellow-800">🔋 On Battery</h4>
+                        <p class="text-yellow-700 text-sm mt-2">Balanced mode rakho</p>
+                    </div>
+                    <div class="bg-red-50 p-4 rounded-lg border-2 border-red-300">
+                        <h4 class="font-bold text-red-800">💡 Power Saver</h4>
+                        <p class="text-red-700 text-sm mt-2">Gaming ke liye avoid karo</p>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="font-semibold text-gray-800 mb-3">✅ High Performance Enable Karna:</h3>
+                    <div class="code-block p-4">
+                        <code>powercfg /setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c</code>
+                        <button onclick="copyCode(this, 'powercfg /setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c')" class="copy-btn bg-white/20 hover:bg-white/30 text-white px-3 py-1 rounded text-sm transition">📋 Copy</button>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="font-semibold text-gray-800 mb-3">✅ Ultimate Performance (Windows 10/11 Pro):</h3>
+                    <div class="code-block p-4">
+                        <code>powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61</code>
+                        <button onclick="copyCode(this, 'powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61')" class="copy-btn bg-white/20 hover:bg-white/30 text-white px-3 py-1 rounded text-sm transition">📋 Copy</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 13: SFC & DISM -->
+        <section id="repair" class="mb-12">
+            <div class="bg-white rounded-2xl shadow-lg p-8 section-card card transition-all duration-300">
+                <div class="flex items-center mb-6">
+                    <span class="text-4xl mr-4">🔧</span>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800">13. System Files Repair Karna</h2>
+                        <p class="text-gray-500">Corrupted Files Fix Karo</p>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6 rounded-r-lg">
+                    <h3 class="font-semibold text-blue-800 mb-2">🤔 Kab Use Karein?</h3>
+                    <ul class="text-gray-700 space-y-1">
+                        <li>• Laptop slow ho gaya hai bina reason ke</li>
+                        <li>• Random errors aa rahe hain</li>
+                        <li>• Programs crash ho rahe hain</li>
+                    </ul>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="font-semibold text-gray-800 mb-3">Step 1: DISM Command (Pehle ye run karo)</h3>
+                    <div class="code-block p-4 mb-2">
+                        <code>DISM /Online /Cleanup-Image /RestoreHealth</code>
+                        <button onclick="copyCode(this, 'DISM /Online /Cleanup-Image /RestoreHealth')" class="copy-btn bg-white/20 hover:bg-white/30 text-white px-3 py-1 rounded text-sm transition">📋 Copy</button>
+                    </div>
+                    <p class="text-sm text-gray-500">⏱️ Time: 10-30 minutes lag sakta hai</p>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="font-semibold text-gray-800 mb-3">Step 2: SFC Command (DISM ke baad)</h3>
+                    <div class="code-block p-4 mb-2">
+                        <code>sfc /scannow</code>
+                        <button onclick="copyCode(this, 'sfc /scannow')" class="copy-btn bg-white/20 hover:bg-white/30 text-white px-3 py-1 rounded text-sm transition">📋 Copy</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 14: Storage Sense -->
+        <section id="storage" class="mb-12">
+            <div class="bg-white rounded-2xl shadow-lg p-8 section-card card transition-all duration-300">
+                <div class="flex items-center mb-6">
+                    <span class="text-4xl mr-4">💾</span>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800">14. Storage Sense Enable Karna</h2>
+                        <p class="text-gray-500">Automatic Cleanup (Windows 10/11)</p>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6 rounded-r-lg">
+                    <h3 class="font-semibold text-blue-800 mb-2">🤔 Ye Kya Hota Hai?</h3>
+                    <p class="text-gray-700">Windows ka built-in feature jo automatically temp files, recycle bin delete karta rehta hai!</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="font-semibold text-gray-800 mb-3">✅ Enable Kaise Karein:</h3>
+                        <div class="bg-gray-100 p-4 rounded-lg">
+                            <p class="mb-2">1. Settings → System → Storage</p>
+                            <p class="mb-2">2. "Storage Sense" toggle ON karo</p>
+                            <p class="mb-2">3. "Configure Storage Sense" click karo</p>
+                            <p>4. Run frequency: "Every week"</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-800 mb-3">✅ Quick Open:</h3>
+                        <div class="code-block p-4">
+                            <code>ms-settings:storagesense</code>
+                            <button onclick="copyCode(this, 'ms-settings:storagesense')" class="copy-btn bg-white/20 hover:bg-white/30 text-white px-3 py-1 rounded text-sm transition">📋</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 15: Bloatware Removal -->
+        <section id="bloatware" class="mb-12">
+            <div class="bg-white rounded-2xl shadow-lg p-8 section-card card transition-all duration-300">
+                <div class="flex items-center mb-6">
+                    <span class="text-4xl mr-4">🗑️</span>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800">15. Bloatware Remove Karna</h2>
+                        <p class="text-gray-500">Unwanted Pre-installed Apps Hatao</p>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="font-semibold text-gray-800 mb-3">❌ Common Bloatware Apps:</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+                        <span class="bg-red-100 px-3 py-2 rounded text-red-700 text-sm">Candy Crush</span>
+                        <span class="bg-red-100 px-3 py-2 rounded text-red-700 text-sm">Xbox Game Bar</span>
+                        <span class="bg-red-100 px-3 py-2 rounded text-red-700 text-sm">3D Viewer</span>
+                        <span class="bg-red-100 px-3 py-2 rounded text-red-700 text-sm">McAfee</span>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="font-semibold text-gray-800 mb-3">✅ PowerShell Commands (Admin):</h3>
+                    <div class="space-y-3">
+                        <div class="code-block p-3">
+                            <code class="text-sm">Get-AppxPackage *candy* | Remove-AppxPackage</code>
+                            <button onclick="copyCode(this, 'Get-AppxPackage *candy* | Remove-AppxPackage')" class="copy-btn bg-white/20 hover:bg-white/30 text-white px-2 py-1 rounded text-xs transition">📋</button>
+                        </div>
+                        <div class="code-block p-3">
+                            <code class="text-sm">Get-AppxPackage *xbox* | Remove-AppxPackage</code>
+                            <button onclick="copyCode(this, 'Get-AppxPackage *xbox* | Remove-AppxPackage')" class="copy-btn bg-white/20 hover:bg-white/30 text-white px-2 py-1 rounded text-xs transition">📋</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 16: RAM Optimization -->
+        <section id="ram" class="mb-12">
+            <div class="bg-white rounded-2xl shadow-lg p-8 section-card card transition-all duration-300">
+                <div class="flex items-center mb-6">
+                    <span class="text-4xl mr-4">🧠</span>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800">16. RAM Optimization Tips</h2>
+                        <p class="text-gray-500">Memory Ko Free Karo</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <h3 class="font-semibold text-gray-800 mb-3">📊 RAM Check Karo:</h3>
+                        <div class="code-block p-4">
+                            <code>systeminfo | findstr Memory</code>
+                            <button onclick="copyCode(this, 'systeminfo | findstr Memory')" class="copy-btn bg-white/20 hover:bg-white/30 text-white px-3 py-1 rounded text-sm transition">📋</button>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-800 mb-3">📈 Current Usage:</h3>
+                        <div class="bg-gray-100 p-4 rounded-lg">
+                            <p><kbd class="bg-gray-300 px-2 py-1 rounded">Ctrl + Shift + Esc</kbd></p>
+                            <p class="mt-2">Task Manager → Performance → Memory</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-green-50 p-4 rounded-lg">
+                    <h3 class="font-semibold text-green-800 mb-3">✅ RAM Free Karne Ke Tips:</h3>
+                    <ul class="grid md:grid-cols-2 gap-2 text-gray-700">
+                        <li>✓ Browser tabs kam rakho (max 10-15)</li>
+                        <li>✓ Background apps close karo</li>
+                        <li>✓ Chrome ke bajaye Edge use karo</li>
+                        <li>✓ Startup programs disable karo</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 17: System Info Check -->
+        <section id="sysinfo" class="mb-12">
+            <div class="bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl shadow-lg p-8 text-white">
+                <div class="flex items-center mb-6">
+                    <span class="text-4xl mr-4">📋</span>
+                    <div>
+                        <h2 class="text-2xl font-bold">17. System Information Check</h2>
+                        <p class="opacity-80">Apne Laptop Ki Details Dekho</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="bg-white/20 p-4 rounded-lg">
+                        <h4 class="font-semibold mb-2">🖥️ Full System Info</h4>
+                        <div class="bg-black/30 p-2 rounded"><code class="text-sm">msinfo32</code></div>
+                    </div>
+                    <div class="bg-white/20 p-4 rounded-lg">
+                        <h4 class="font-semibold mb-2">🔋 Battery Health</h4>
+                        <div class="bg-black/30 p-2 rounded"><code class="text-sm">powercfg /batteryreport</code></div>
+                    </div>
+                    <div class="bg-white/20 p-4 rounded-lg">
+                        <h4 class="font-semibold mb-2">📊 DirectX Info</h4>
+                        <div class="bg-black/30 p-2 rounded"><code class="text-sm">dxdiag</code></div>
+                    </div>
+                    <div class="bg-white/20 p-4 rounded-lg">
+                        <h4 class="font-semibold mb-2">🌐 IP Address</h4>
+                        <div class="bg-black/30 p-2 rounded"><code class="text-sm">ipconfig /all</code></div>
+                    </div>
+                    <div class="bg-white/20 p-4 rounded-lg">
+                        <h4 class="font-semibold mb-2">🔧 Windows Version</h4>
+                        <div class="bg-black/30 p-2 rounded"><code class="text-sm">winver</code></div>
+                    </div>
+                    <div class="bg-white/20 p-4 rounded-lg">
+                        <h4 class="font-semibold mb-2">⚙️ Device Manager</h4>
+                        <div class="bg-black/30 p-2 rounded"><code class="text-sm">devmgmt.msc</code></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 18: Drive & Hardware Health -->
+        <section id="hardware" class="mb-12">
+            <div class="bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl shadow-lg p-8 text-white">
+                <div class="flex items-center mb-6">
+                    <span class="text-4xl mr-4">💽</span>
+                    <div>
+                        <h2 class="text-2xl font-bold">18. Drive & Hardware Health</h2>
+                        <p class="opacity-80">Storage Ki Halat Check Karein</p>
+                    </div>
+                </div>
+
+                <div class="bg-white/10 border-l-4 border-white p-4 mb-6 rounded-r-lg">
+                    <p class="text-white/90">Agar aapka laptop slow ho raha hai, toh ye commands check karne ke liye best hain. Ye hard drive errors dhoondhte hain aur fix karte hain.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Check Disk -->
+                    <div class="bg-white/20 backdrop-blur-sm p-6 rounded-xl">
+                        <div class="text-center mb-4">
+                            <span class="text-4xl">🔍</span>
+                            <h3 class="font-bold text-xl mt-2">Check Disk</h3>
+                            <p class="text-sm opacity-80">Error Repair</p>
+                        </div>
+                        <div class="code-block p-3 mb-3">
+                            <code class="text-yellow-300">chkdsk /f</code>
+                            <button onclick="copyCode(this, 'chkdsk /f')" class="copy-btn bg-white/20 hover:bg-white/30 text-white px-2 py-1 rounded text-xs transition">📋</button>
+                        </div>
+                        <p class="text-sm opacity-80">Hard drive ke errors dhoondhne aur fix karne ke liye. Restart required!</p>
+                        <div class="mt-3 bg-yellow-500/30 px-3 py-2 rounded text-sm">
+                            ⚠️ Admin CMD mein run karo
+                        </div>
+                    </div>
+
+                    <!-- SFC -->
+                    <div class="bg-white/20 backdrop-blur-sm p-6 rounded-xl">
+                        <div class="text-center mb-4">
+                            <span class="text-4xl">💾</span>
+                            <h3 class="font-bold text-xl mt-2">System File Checker</h3>
+                            <p class="text-sm opacity-80">Corrupt Files Fix</p>
+                        </div>
+                        <div class="code-block p-3 mb-3">
+                            <code class="text-yellow-300">sfc /scannow</code>
+                            <button onclick="copyCode(this, 'sfc /scannow')" class="copy-btn bg-white/20 hover:bg-white/30 text-white px-2 py-1 rounded text-xs transition">📋</button>
+                        </div>
+                        <p class="text-sm opacity-80">Windows ki corrupt files ko automatic thik kar deta hai.</p>
+                        <div class="mt-3 bg-blue-500/30 px-3 py-2 rounded text-sm">
+                            ⏱️ 15-20 min lagta hai
+                        </div>
+                    </div>
+
+                    <!-- Disk Cleanup -->
+                    <div class="bg-white/20 backdrop-blur-sm p-6 rounded-xl">
+                        <div class="text-center mb-4">
+                            <span class="text-4xl">🧹</span>
+                            <h3 class="font-bold text-xl mt-2">Disk Cleanup</h3>
+                            <p class="text-sm opacity-80">Junk Files Saaf</p>
+                        </div>
+                        <div class="code-block p-3 mb-3">
+                            <code class="text-yellow-300">cleanmgr</code>
+                            <button onclick="copyCode(this, 'cleanmgr')" class="copy-btn bg-white/20 hover:bg-white/30 text-white px-2 py-1 rounded text-xs transition">📋</button>
+                        </div>
+                        <p class="text-sm opacity-80">Purani temporary files ko saaf karne ke liye Windows tool.</p>
+                        <div class="mt-3 bg-green-500/30 px-3 py-2 rounded text-sm">
+                            ✅ 100% Safe
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Commands -->
+                <div class="mt-6 grid md:grid-cols-2 gap-4">
+                    <div class="bg-white/10 p-4 rounded-lg">
+                        <h4 class="font-semibold mb-2">🔧 CHKDSK with Full Scan:</h4>
+                        <div class="code-block p-3">
+                            <code class="text-sm">chkdsk C: /f /r /x</code>
+                            <button onclick="copyCode(this, 'chkdsk C: /f /r /x')" class="copy-btn bg-white/20 hover:bg-white/30 text-white px-2 py-1 rounded text-xs transition">📋</button>
+                        </div>
+                        <p class="text-xs mt-2 opacity-70">/f = fix errors, /r = recover data, /x = dismount drive</p>
+                    </div>
+                    <div class="bg-white/10 p-4 rounded-lg">
+                        <h4 class="font-semibold mb-2">📊 Disk Health Check:</h4>
+                        <div class="code-block p-3">
+                            <code class="text-sm">wmic diskdrive get status</code>
+                            <button onclick="copyCode(this, 'wmic diskdrive get status')" class="copy-btn bg-white/20 hover:bg-white/30 text-white px-2 py-1 rounded text-xs transition">📋</button>
+                        </div>
+                        <p class="text-xs mt-2 opacity-70">"OK" aaye toh disk healthy hai!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 19: Advanced Monitoring -->
+        <section id="monitoring" class="mb-12">
+            <div class="bg-white rounded-2xl shadow-lg p-8 section-card card transition-all duration-300">
+                <div class="flex items-center mb-6">
+                    <span class="text-4xl mr-4">📈</span>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800">19. Advanced Monitoring</h2>
+                        <p class="text-gray-500">System Ki Gehraai Mein Jaayiye</p>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6 rounded-r-lg">
+                    <h3 class="font-semibold text-blue-800 mb-2">🤔 Ye Commands Kab Use Karein?</h3>
+                    <p class="text-gray-700">Jab aap dekhna chahte ho ki aapka RAM ya CPU kahan kharch ho raha hai. Task Manager se bhi zyada detailed info milti hai!</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6 mb-6">
+                    <!-- Resource Monitor -->
+                    <div class="bg-gradient-to-br from-purple-100 to-pink-100 p-6 rounded-xl border-2 border-purple-200">
+                        <div class="text-center mb-4">
+                            <span class="text-4xl">📈</span>
+                            <h3 class="font-bold text-purple-800 text-lg mt-2">Resource Monitor</h3>
+                        </div>
+                        <div class="code-block p-3 mb-3">
+                            <code>resmon</code>
+                            <button onclick="copyCode(this, 'resmon')" class="copy-btn bg-white/20 hover:bg-white/30 text-white px-2 py-1 rounded text-xs transition">📋</button>
+                        </div>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>✓ CPU usage per process</li>
+                            <li>✓ Memory details</li>
+                            <li>✓ Disk activity</li>
+                            <li>✓ Network usage</li>
+                        </ul>
+                    </div>
+
+                    <!-- Performance Monitor -->
+                    <div class="bg-gradient-to-br from-green-100 to-teal-100 p-6 rounded-xl border-2 border-green-200">
+                        <div class="text-center mb-4">
+                            <span class="text-4xl">⏱️</span>
+                            <h3 class="font-bold text-green-800 text-lg mt-2">Performance Monitor</h3>
+                        </div>
+                        <div class="code-block p-3 mb-3">
+                            <code>perfmon</code>
+                            <button onclick="copyCode(this, 'perfmon')" class="copy-btn bg-white/20 hover:bg-white/30 text-white px-2 py-1 rounded text-xs transition">📋</button>
+                        </div>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>✓ Live performance graphs</li>
+                            <li>✓ Historical data</li>
+                            <li>✓ Custom counters</li>
+                            <li>✓ Reports generate</li>
+                        </ul>
+                    </div>
+
+                    <!-- Event Viewer -->
+                    <div class="bg-gradient-to-br from-orange-100 to-yellow-100 p-6 rounded-xl border-2 border-orange-200">
+                        <div class="text-center mb-4">
+                            <span class="text-4xl">📑</span>
+                            <h3 class="font-bold text-orange-800 text-lg mt-2">Event Viewer</h3>
+                        </div>
+                        <div class="code-block p-3 mb-3">
+                            <code>eventvwr.msc</code>
+                            <button onclick="copyCode(this, 'eventvwr.msc')" class="copy-btn bg-white/20 hover:bg-white/30 text-white px-2 py-1 rounded text-xs transition">📋</button>
+                        </div>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>✓ Error history</li>
+                            <li>✓ Warning logs</li>
+                            <li>✓ Application crashes</li>
+                            <li>✓ System events</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-gray-800 text-white p-4 rounded-lg">
+                    <h4 class="font-semibold mb-3">💡 Pro Tips:</h4>
+                    <div class="grid md:grid-cols-2 gap-4 text-sm">
+                        <div class="flex items-start">
+                            <span class="text-green-400 mr-2">→</span>
+                            <p>Resource Monitor mein "CPU" tab pe jaake dekho kaun sa process zyada use kar raha hai</p>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-green-400 mr-2">→</span>
+                            <p>Event Viewer mein "Windows Logs > System" mein errors dekhne milenge</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 20: Networking & Internet -->
+        <section id="network" class="mb-12">
+            <div class="bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl shadow-lg p-8 text-white">
+                <div class="flex items-center mb-6">
+                    <span class="text-4xl mr-4">📶</span>
+                    <div>
+                        <h2 class="text-2xl font-bold">20. Networking & Internet</h2>
+                        <p class="opacity-80">WiFi/Internet Ki Troubleshooting</p>
+                    </div>
+                </div>
+
+                <div class="bg-white/10 border-l-4 border-white p-4 mb-6 rounded-r-lg">
+                    <p class="text-white/90">Network issues ke liye ye commands jadui hain! Internet slow hai ya connect nahi ho raha? Ye try karo.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+                    <!-- WiFi Password -->
+                    <div class="bg-white/20 backdrop-blur-sm p-6 rounded-xl">
+                        <div class="flex items-center mb-3">
+                            <span class="text-3xl mr-3">🔐</span>
+                            <h3 class="font-bold">WiFi Password Dekho</h3>
+                        </div>
+                        <div class="code-block p-3 mb-3">
+                            <code class="text-xs">netsh wlan show profile name="WIFI_NAME" key=clear</code>
+                            <button onclick="copyCode(this, 'netsh wlan show profile name=\"WIFI_NAME\" key=clear')" class="copy-btn bg-white/20 hover:bg-white/30 text-white px-2 py-1 rounded text-xs transition">📋</button>
+                        </div>
+                        <p class="text-sm opacity-80">"WIFI_NAME" ki jagah apne WiFi ka naam likho. Key Content mein password milega!</p>
+                    </div>
+
+                    <!-- DNS Flush -->
+                    <div class="bg-white/20 backdrop-blur-sm p-6 rounded-xl">
+                        <div class="flex items-center mb-3">
+                            <span class="text-3xl mr-3">⚡</span>
+                            <h3 class="font-bold">DNS Flush</h3>
+                        </div>
+                        <div class="code-block p-3 mb-3">
+                            <code>ipconfig /flushdns</code>
+                            <button onclick="copyCode(this, 'ipconfig /flushdns')" class="copy-btn bg-white/20 hover:bg-white/30 text-white px-2 py-1 rounded text-xs transition">📋</button>
+                        </div>
+                        <p class="text-sm opacity-80">Website nahi khul rahi? Internet cache saaf karo!</p>
+                    </div>
+
+                    <!-- Network Connections -->
+                    <div class="bg-white/20 backdrop-blur-sm p-6 rounded-xl">
+                        <div class="flex items-center mb-3">
+                            <span class="text-3xl mr-3">🌐</span>
+                            <h3 class="font-bold">Network Connections</h3>
+                        </div>
+                        <div class="code-block p-3 mb-3">
+                            <code>ncpa.cpl</code>
+                            <button onclick="copyCode(this, 'ncpa.cpl')" class="copy-btn bg-white/20 hover:bg-white/30 text-white px-2 py-1 rounded text-xs transition">📋</button>
+                        </div>
+                        <p class="text-sm opacity-80">Saare network adapters ki list dekhne ke liye.</p>
+                    </div>
+                </div>
+
+                <!-- More Network Commands -->
+                <div class="bg-white/10 rounded-xl p-6">
+                    <h4 class="font-bold mb-4">🛠️ More Network Commands:</h4>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="bg-black/20 p-3 rounded-lg">
+                            <code class="text-cyan-300 text-sm">ipconfig /all</code>
+                            <p class="text-xs mt-1 opacity-70">Full IP details</p>
+                        </div>
+                        <div class="bg-black/20 p-3 rounded-lg">
+                            <code class="text-cyan-300 text-sm">ping google.com</code>
+                            <p class="text-xs mt-1 opacity-70">Internet check</p>
+                        </div>
+                        <div class="bg-black/20 p-3 rounded-lg">
+                            <code class="text-cyan-300 text-sm">netsh wlan show profiles</code>
+                            <p class="text-xs mt-1 opacity-70">Saved WiFi list</p>
+                        </div>
+                        <div class="bg-black/20 p-3 rounded-lg">
+                            <code class="text-cyan-300 text-sm">ipconfig /release</code>
+                            <p class="text-xs mt-1 opacity-70">IP release karo</p>
+                        </div>
+                        <div class="bg-black/20 p-3 rounded-lg">
+                            <code class="text-cyan-300 text-sm">ipconfig /renew</code>
+                            <p class="text-xs mt-1 opacity-70">New IP lo</p>
+                        </div>
+                        <div class="bg-black/20 p-3 rounded-lg">
+                            <code class="text-cyan-300 text-sm">netstat -an</code>
+                            <p class="text-xs mt-1 opacity-70">Active connections</p>
+                        </div>
+                        <div class="bg-black/20 p-3 rounded-lg">
+                            <code class="text-cyan-300 text-sm">tracert google.com</code>
+                            <p class="text-xs mt-1 opacity-70">Route trace</p>
+                        </div>
+                        <div class="bg-black/20 p-3 rounded-lg">
+                            <code class="text-cyan-300 text-sm">nslookup google.com</code>
+                            <p class="text-xs mt-1 opacity-70">DNS lookup</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Network Reset -->
+                <div class="mt-6 bg-red-500/30 p-4 rounded-lg">
+                    <h4 class="font-bold mb-2">🔄 Complete Network Reset (Last Resort):</h4>
+                    <div class="code-block p-3">
+                        <code class="text-sm">netsh winsock reset && netsh int ip reset && ipconfig /release && ipconfig /renew && ipconfig /flushdns</code>
+                        <button onclick="copyCode(this, 'netsh winsock reset && netsh int ip reset && ipconfig /release && ipconfig /renew && ipconfig /flushdns')" class="copy-btn bg-white/20 hover:bg-white/30 text-white px-2 py-1 rounded text-xs transition">📋</button>
+                    </div>
+                    <p class="text-xs mt-2 opacity-80">⚠️ Ye command run karne ke baad restart karo. Network settings reset ho jayengi!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 21: Hidden Windows Tools -->
+        <section id="hidden-tools" class="mb-12">
+            <div class="bg-white rounded-2xl shadow-lg p-8 section-card card transition-all duration-300">
+                <div class="flex items-center mb-6">
+                    <span class="text-4xl mr-4">🔮</span>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800">21. Hidden Windows Tools</h2>
+                        <p class="text-gray-500">Secret Windows Commands Jo Bahut Kaam Aate Hain</p>
+                    </div>
+                </div>
+
+                <div class="bg-purple-50 border-l-4 border-purple-500 p-4 mb-6 rounded-r-lg">
+                    <h3 class="font-semibold text-purple-800 mb-2">💡 Ye Commands Kaha Use Karein?</h3>
+                    <p class="text-gray-700">Win + R press karo aur ye commands type karke Enter press karo. Seedha tool open ho jayega!</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-4 mb-6">
+                    <!-- Program Uninstaller -->
+                    <div class="bg-gradient-to-br from-red-50 to-pink-50 p-4 rounded-xl border border-red-200 hover:shadow-lg transition">
+                        <span class="text-3xl">📱</span>
+                        <h4 class="font-bold text-red-800 mt-2">Program Uninstaller</h4>
+                        <div class="code-block p-2 mt-2">
+                            <code class="text-xs">appwiz.cpl</code>
+                            <button onclick="copyCode(this, 'appwiz.cpl')" class="copy-btn bg-white/20 hover:bg-white/30 text-white px-1 py-0.5 rounded text-xs transition">📋</button>
+                        </div>
+                        <p class="text-xs text-gray-600 mt-2">Add/Remove Programs shortcut</p>
+                    </div>
+
+                    <!-- Mouse Settings -->
+                    <div class="bg-gradient-to-br from-blue-50 to-cyan-50 p-4 rounded-xl border border-blue-200 hover:shadow-lg transition">
+                        <span class="text-3xl">🖱️</span>
+                        <h4 class="font-bold text-blue-800 mt-2">Mouse Settings</h4>
+                        <div class="code-block p-2 mt-2">
+                            <code class="text-xs">main.cpl</code>
+                            <button onclick="copyCode(this, 'main.cpl')" class="copy-btn bg-white/20 hover:bg-white/30 text-white px-1 py-0.5 rounded text-xs transition">📋</button>
+                        </div>
+                        <p class="text-xs text-gray-600 mt-2">Speed & buttons customize</p>
+                    </div>
+
+                    <!-- User Accounts -->
+                    <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-4 rounded-xl border border-green-200 hover:shadow-lg transition">
+                        <span class="text-3xl">🔑</span>
+                        <h4 class="font-bold text-green-800 mt-2">User Accounts</h4>
+                        <div class="code-block p-2 mt-2">
+                            <code class="text-xs">netplwiz</code>
+                            <button onclick="copyCode(this, 'netplwiz')" class="copy-btn bg-white/20 hover:bg-white/30 text-white px-1 py-0.5 rounded text-xs transition">📋</button>
+                        </div>
+                        <p class="text-xs text-gray-600 mt-2">Users & passwords manage</p>
+                    </div>
+
+                    <!-- Sound Settings -->
+                    <div class="bg-gradient-to-br from-yellow-50 to-orange-50 p-4 rounded-xl border border-yellow-200 hover:shadow-lg transition">
+                        <span class="text-3xl">🔊</span>
+                        <h4 class="font-bold text-yellow-800 mt-2">Sound Settings</h4>
+                        <div class="code-block p-2 mt-2">
+                            <code class="text-xs">mmsys.cpl</code>
+                            <button onclick="copyCode(this, 'mmsys.cpl')" class="copy-btn bg-white/20 hover:bg-white/30 text-white px-1 py-0.5 rounded text-xs transition">📋</button>
+                        </div>
+                        <p class="text-xs text-gray-600 mt-2">Audio devices manage</p>
+                    </div>
+
+                    <!-- Display Settings -->
+                    <div class="bg-gradient-to-br from-purple-50 to-violet-50 p-4 rounded-xl border border-purple-200 hover:shadow-lg transition">
+                        <span class="text-3xl">🖥️</span>
+                        <h4 class="font-bold text-purple-800 mt-2">Display Settings</h4>
+                        <div class="code-block p-2 mt-2">
+                            <code class="text-xs">desk.cpl</code>
+                            <button onclick="copyCode(this, 'desk.cpl')" class="copy-btn bg-white/20 hover:bg-white/30 text-white px-1 py-0.5 rounded text-xs transition">📋</button>
+                        </div>
+                        <p class="text-xs text-gray-600 mt-2">Resolution & display</p>
+                    </div>
+
+                    <!-- Power Options -->
+                    <div class="bg-gradient-to-br from-teal-50 to-cyan-50 p-4 rounded-xl border border-teal-200 hover:shadow-lg transition">
+                        <span class="text-3xl">🔋</span>
+                        <h4 class="font-bold text-teal-800 mt-2">Power Options</h4>
+                        <div class="code-block p-2 mt-2">
+                            <code class="text-xs">powercfg.cpl</code>
+                            <button onclick="copyCode(this, 'powercfg.cpl')" class="copy-btn bg-white/20 hover:bg-white/30 text-white px-1 py-0.5 rounded text-xs transition">📋</button>
+                        </div>
+                        <p class="text-xs text-gray-600 mt-2">Power plans manage</p>
+                    </div>
+
+                    <!-- Date & Time -->
+                    <div class="bg-gradient-to-br from-indigo-50 to-blue-50 p-4 rounded-xl border border-indigo-200 hover:shadow-lg transition">
+                        <span class="text-3xl">📅</span>
+                        <h4 class="font-bold text-indigo-800 mt-2">Date & Time</h4>
+                        <div class="code-block p-2 mt-2">
+                            <code class="text-xs">timedate.cpl</code>
+                            <button onclick="copyCode(this, 'timedate.cpl')" class="copy-btn bg-white/20 hover:bg-white/30 text-white px-1 py-0.5 rounded text-xs transition">📋</button>
+                        </div>
+                        <p class="text-xs text-gray-600 mt-2">Date/time settings</p>
+                    </div>
+
+                    <!-- Firewall -->
+                    <div class="bg-gradient-to-br from-rose-50 to-red-50 p-4 rounded-xl border border-rose-200 hover:shadow-lg transition">
+                        <span class="text-3xl">🛡️</span>
+                        <h4 class="font-bold text-rose-800 mt-2">Firewall</h4>
+                        <div class="code-block p-2 mt-2">
+                            <code class="text-xs">firewall.cpl</code>
+                            <button onclick="copyCode(this, 'firewall.cpl')" class="copy-btn bg-white/20 hover:bg-white/30 text-white px-1 py-0.5 rounded text-xs transition">📋</button>
+                        </div>
+                        <p class="text-xs text-gray-600 mt-2">Windows Firewall</p>
+                    </div>
+                </div>
+
+                <!-- More Hidden Commands -->
+                <div class="bg-gray-100 rounded-xl p-6">
+                    <h4 class="font-bold text-gray-800 mb-4">🎯 More Useful Commands:</h4>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+                        <div class="bg-white p-3 rounded-lg shadow-sm flex justify-between items-center">
+                            <div>
+                                <code class="text-purple-600 font-bold">osk</code>
+                                <p class="text-xs text-gray-500">On-Screen Keyboard</p>
+                            </div>
+                            <button onclick="copyCode(this, 'osk')" class="bg-purple-100 hover:bg-purple-200 text-purple-700 px-2 py-1 rounded text-xs transition">📋</button>
+                        </div>
+                        <div class="bg-white p-3 rounded-lg shadow-sm flex justify-between items-center">
+                            <div>
+                                <code class="text-purple-600 font-bold">magnify</code>
+                                <p class="text-xs text-gray-500">Magnifier Tool</p>
+                            </div>
+                            <button onclick="copyCode(this, 'magnify')" class="bg-purple-100 hover:bg-purple-200 text-purple-700 px-2 py-1 rounded text-xs transition">📋</button>
+                        </div>
+                        <div class="bg-white p-3 rounded-lg shadow-sm flex justify-between items-center">
+                            <div>
+                                <code class="text-purple-600 font-bold">snippingtool</code>
+                                <p class="text-xs text-gray-500">Screenshot Tool</p>
+                            </div>
+                            <button onclick="copyCode(this, 'snippingtool')" class="bg-purple-100 hover:bg-purple-200 text-purple-700 px-2 py-1 rounded text-xs transition">📋</button>
+                        </div>
+                        <div class="bg-white p-3 rounded-lg shadow-sm flex justify-between items-center">
+                            <div>
+                                <code class="text-purple-600 font-bold">calc</code>
+                                <p class="text-xs text-gray-500">Calculator</p>
+                            </div>
+                            <button onclick="copyCode(this, 'calc')" class="bg-purple-100 hover:bg-purple-200 text-purple-700 px-2 py-1 rounded text-xs transition">📋</button>
+                        </div>
+                        <div class="bg-white p-3 rounded-lg shadow-sm flex justify-between items-center">
+                            <div>
+                                <code class="text-purple-600 font-bold">notepad</code>
+                                <p class="text-xs text-gray-500">Notepad</p>
+                            </div>
+                            <button onclick="copyCode(this, 'notepad')" class="bg-purple-100 hover:bg-purple-200 text-purple-700 px-2 py-1 rounded text-xs transition">📋</button>
+                        </div>
+                        <div class="bg-white p-3 rounded-lg shadow-sm flex justify-between items-center">
+                            <div>
+                                <code class="text-purple-600 font-bold">mspaint</code>
+                                <p class="text-xs text-gray-500">MS Paint</p>
+                            </div>
+                            <button onclick="copyCode(this, 'mspaint')" class="bg-purple-100 hover:bg-purple-200 text-purple-700 px-2 py-1 rounded text-xs transition">📋</button>
+                        </div>
+                        <div class="bg-white p-3 rounded-lg shadow-sm flex justify-between items-center">
+                            <div>
+                                <code class="text-purple-600 font-bold">charmap</code>
+                                <p class="text-xs text-gray-500">Character Map</p>
+                            </div>
+                            <button onclick="copyCode(this, 'charmap')" class="bg-purple-100 hover:bg-purple-200 text-purple-700 px-2 py-1 rounded text-xs transition">📋</button>
+                        </div>
+                        <div class="bg-white p-3 rounded-lg shadow-sm flex justify-between items-center">
+                            <div>
+                                <code class="text-purple-600 font-bold">control</code>
+                                <p class="text-xs text-gray-500">Control Panel</p>
+                            </div>
+                            <button onclick="copyCode(this, 'control')" class="bg-purple-100 hover:bg-purple-200 text-purple-700 px-2 py-1 rounded text-xs transition">📋</button>
+                        </div>
+                        <div class="bg-white p-3 rounded-lg shadow-sm flex justify-between items-center">
+                            <div>
+                                <code class="text-purple-600 font-bold">regedit</code>
+                                <p class="text-xs text-gray-500">Registry Editor ⚠️</p>
+                            </div>
+                            <button onclick="copyCode(this, 'regedit')" class="bg-purple-100 hover:bg-purple-200 text-purple-700 px-2 py-1 rounded text-xs transition">📋</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pro Tip -->
+                <div class="mt-6 bg-yellow-50 border border-yellow-200 p-4 rounded-lg">
+                    <h4 class="font-semibold text-yellow-800 flex items-center">
+                        <span class="mr-2">💡</span> Pro Tip:
+                    </h4>
+                    <p class="text-gray-700 mt-2">Inmein se kuch commands (jaise <code class="bg-yellow-200 px-1 rounded">sfc /scannow</code>) chalane ke liye aapko Command Prompt (CMD) ko <strong>"Run as Administrator"</strong> karke kholna padega!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Checklist -->
+        <section id="checklist" class="mb-12">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <div class="flex items-center justify-between mb-6">
+                    <div class="flex items-center">
+                        <span class="text-4xl mr-4">✅</span>
+                        <div>
+                            <h2 class="text-2xl font-bold text-gray-800">Progress Tracker</h2>
+                            <p class="text-gray-500">Apna Progress Track Karo!</p>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <span id="progressPercent" class="text-3xl font-bold text-purple-600">0%</span>
+                        <p class="text-sm text-gray-500">Complete</p>
+                    </div>
+                </div>
+
+                <div class="w-full bg-gray-200 rounded-full h-4 mb-6">
+                    <div id="progressBar" class="bg-gradient-to-r from-purple-500 to-pink-500 h-4 rounded-full transition-all duration-500" style="width: 0%"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-4" id="checklistContainer">
+                    <label class="flex items-center p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 transition checklist-item">
+                        <input type="checkbox" class="w-5 h-5 mr-3 accent-purple-600" onchange="updateProgress()">
+                        <span>%temp% folder clean kiya</span>
+                    </label>
+                    <label class="flex items-center p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 transition checklist-item">
+                        <input type="checkbox" class="w-5 h-5 mr-3 accent-purple-600" onchange="updateProgress()">
+                        <span>Prefetch folder clean kiya</span>
+                    </label>
+                    <label class="flex items-center p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 transition checklist-item">
+                        <input type="checkbox" class="w-5 h-5 mr-3 accent-purple-600" onchange="updateProgress()">
+                        <span>Disk Cleanup run kiya</span>
+                    </label>
+                    <label class="flex items-center p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 transition checklist-item">
+                        <input type="checkbox" class="w-5 h-5 mr-3 accent-purple-600" onchange="updateProgress()">
+                        <span>DNS Flush kiya</span>
+                    </label>
+                    <label class="flex items-center p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 transition checklist-item">
+                        <input type="checkbox" class="w-5 h-5 mr-3 accent-purple-600" onchange="updateProgress()">
+                        <span>Startup programs check kiya</span>
+                    </label>
+                    <label class="flex items-center p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 transition checklist-item">
+                        <input type="checkbox" class="w-5 h-5 mr-3 accent-purple-600" onchange="updateProgress()">
+                        <span>Browser cache clear kiya</span>
+                    </label>
+                    <label class="flex items-center p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 transition checklist-item">
+                        <input type="checkbox" class="w-5 h-5 mr-3 accent-purple-600" onchange="updateProgress()">
+                        <span>Visual effects optimize kiya</span>
+                    </label>
+                    <label class="flex items-center p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 transition checklist-item">
+                        <input type="checkbox" class="w-5 h-5 mr-3 accent-purple-600" onchange="updateProgress()">
+                        <span>Power plan set kiya</span>
+                    </label>
+                </div>
+
+                <button onclick="resetProgress()" class="mt-6 px-6 py-2 bg-gray-200 hover:bg-gray-300 rounded-lg transition">🔄 Reset Progress</button>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="mb-12">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <div class="flex items-center mb-6">
+                    <span class="text-4xl mr-4">❓</span>
+                    <h2 class="text-2xl font-bold text-gray-800">Frequently Asked Questions</h2>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="border border-gray-200 rounded-lg">
+                        <button onclick="toggleFaq(this)" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                            <span class="font-semibold">Kya ye methods safe hain?</span>
+                            <span class="text-2xl transition-transform">+</span>
+                        </button>
+                        <div class="hidden px-6 pb-4">
+                            <p class="text-gray-600">Haan, ye sab methods 100% safe hain! Ye sirf temporary files delete karte hain jo automatically dobara ban jayengi.</p>
+                        </div>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-lg">
+                        <button onclick="toggleFaq(this)" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                            <span class="font-semibold">Kitni baar cleanup karna chahiye?</span>
+                            <span class="text-2xl transition-transform">+</span>
+                        </button>
+                        <div class="hidden px-6 pb-4">
+                            <p class="text-gray-600">Weekly %temp% aur browser cache clean karo. Monthly disk cleanup aur startup check karo.</p>
+                        </div>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-lg">
+                        <button onclick="toggleFaq(this)" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                            <span class="font-semibold">Mera laptop phir bhi slow hai?</span>
+                            <span class="text-2xl transition-transform">+</span>
+                        </button>
+                        <div class="hidden px-6 pb-4">
+                            <p class="text-gray-600">1) RAM upgrade karo (8GB minimum) 2) HDD ko SSD se replace karo - 10x speed difference!</p>
+                        </div>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-lg">
+                        <button onclick="toggleFaq(this)" class="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50">
+                            <span class="font-semibold">SSD hai toh defrag karoon kya?</span>
+                            <span class="text-2xl transition-transform">+</span>
+                        </button>
+                        <div class="hidden px-6 pb-4">
+                            <p class="text-gray-600">NAHI! SSD mein defrag bilkul mat karo. Isse SSD ki life kam hoti hai. Windows automatically TRIM use karta hai.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Reference Table -->
+        <section id="reference" class="mb-12">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                    <span class="mr-3">📊</span> Quick Reference Table
+                </h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead class="bg-gray-100">
+                            <tr>
+                                <th class="px-4 py-3 text-left">Command</th>
+                                <th class="px-4 py-3 text-left">Kya Karta Hai</th>
+                                <th class="px-4 py-3 text-center">Safe?</th>
+                                <th class="px-4 py-3 text-center">Space Free</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="px-4 py-3"><code class="bg-gray-200 px-2 py-1 rounded">%temp%</code></td>
+                                <td class="px-4 py-3">User temp folder open</td>
+                                <td class="px-4 py-3 text-center"><span class="text-green-500">✅ Yes</span></td>
+                                <td class="px-4 py-3 text-center">500MB - 5GB</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="px-4 py-3"><code class="bg-gray-200 px-2 py-1 rounded">prefetch</code></td>
+                                <td class="px-4 py-3">Prefetch folder open</td>
+                                <td class="px-4 py-3 text-center"><span class="text-green-500">✅ Yes</span></td>
+                                <td class="px-4 py-3 text-center">50MB - 200MB</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="px-4 py-3"><code class="bg-gray-200 px-2 py-1 rounded">cleanmgr</code></td>
+                                <td class="px-4 py-3">Disk cleanup tool</td>
+                                <td class="px-4 py-3 text-center"><span class="text-green-500">✅ Yes</span></td>
+                                <td class="px-4 py-3 text-center">1GB - 10GB</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="px-4 py-3"><code class="bg-gray-200 px-2 py-1 rounded">recent</code></td>
+                                <td class="px-4 py-3">Recent files folder</td>
+                                <td class="px-4 py-3 text-center"><span class="text-green-500">✅ Yes</span></td>
+                                <td class="px-4 py-3 text-center">~50MB</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="px-4 py-3"><code class="bg-gray-200 px-2 py-1 rounded">ipconfig /flushdns</code></td>
+                                <td class="px-4 py-3">DNS cache clear</td>
+                                <td class="px-4 py-3 text-center"><span class="text-green-500">✅ Yes</span></td>
+                                <td class="px-4 py-3 text-center">-</td>
+                            </tr>
+                            <tr class="border-b hover:bg-gray-50">
+                                <td class="px-4 py-3"><code class="bg-gray-200 px-2 py-1 rounded">msconfig</code></td>
+                                <td class="px-4 py-3">Startup config</td>
+                                <td class="px-4 py-3 text-center"><span class="text-green-500">✅ Yes</span></td>
+                                <td class="px-4 py-3 text-center">-</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-4 py-3"><code class="bg-gray-200 px-2 py-1 rounded">dfrgui</code></td>
+                                <td class="px-4 py-3">Defragmentation tool</td>
+                                <td class="px-4 py-3 text-center"><span class="text-green-500">✅ Yes</span></td>
+                                <td class="px-4 py-3 text-center">-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Warning Section -->
+        <section id="warning" class="mb-12">
+            <div class="bg-red-50 border-2 border-red-200 rounded-2xl p-8">
+                <h2 class="text-2xl font-bold text-red-800 mb-6 flex items-center">
+                    <span class="mr-3">⚠️</span> Kya NAHI Karna Chahiye
+                </h2>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-white p-4 rounded-lg border border-red-200">
+                        <code class="text-red-600 font-bold">del C:\Windows\System32\*</code>
+                        <p class="text-red-700 mt-2">❌ SYSTEM CRASH! Windows khatam!</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg border border-red-200">
+                        <span class="text-red-600 font-bold">Random Registry Edit</span>
+                        <p class="text-red-700 mt-2">❌ Boot issues, Windows corrupt!</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg border border-red-200">
+                        <span class="text-red-600 font-bold">Random .dll Delete</span>
+                        <p class="text-red-700 mt-2">❌ Programs crash honge!</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg border border-red-200">
+                        <span class="text-red-600 font-bold">Driver Folder Delete</span>
+                        <p class="text-red-700 mt-2">❌ Hardware kaam nahi karega!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Frequency Guide -->
+        <section id="frequency" class="mb-12">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                    <span class="mr-3">🔄</span> Kitni Baar Karna Chahiye?
+                </h2>
+                <div class="grid md:grid-cols-5 gap-4">
+                    <div class="text-center p-4 bg-green-50 rounded-xl">
+                        <span class="text-3xl">📅</span>
+                        <h3 class="font-bold text-green-800 mt-2">Weekly</h3>
+                        <p class="text-sm text-gray-600 mt-2">%temp% clean<br>Browser cache</p>
+                    </div>
+                    <div class="text-center p-4 bg-blue-50 rounded-xl">
+                        <span class="text-3xl">📆</span>
+                        <h3 class="font-bold text-blue-800 mt-2">Monthly</h3>
+                        <p class="text-sm text-gray-600 mt-2">Disk Cleanup<br>Startup check</p>
+                    </div>
+                    <div class="text-center p-4 bg-purple-50 rounded-xl">
+                        <span class="text-3xl">🗓️</span>
+                        <h3 class="font-bold text-purple-800 mt-2">Monthly</h3>
+                        <p class="text-sm text-gray-600 mt-2">Defrag (HDD)<br>Prefetch clean</p>
+                    </div>
+                    <div class="text-center p-4 bg-yellow-50 rounded-xl">
+                        <span class="text-3xl">⚡</span>
+                        <h3 class="font-bold text-yellow-800 mt-2">When Needed</h3>
+                        <p class="text-sm text-gray-600 mt-2">DNS Flush<br>Recent files</p>
+                    </div>
+                    <div class="text-center p-4 bg-red-50 rounded-xl">
+                        <span class="text-3xl">🔄</span>
+                        <h3 class="font-bold text-red-800 mt-2">Regularly</h3>
+                        <p class="text-sm text-gray-600 mt-2">Windows Update<br>Check</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 22: Keyboard Shortcuts -->
+        <section id="shortcuts" class="mb-12">
+            <div class="bg-gradient-to-r from-violet-600 to-purple-700 rounded-2xl shadow-lg p-8 text-white">
+                <div class="flex items-center mb-6">
+                    <span class="text-4xl mr-4">⌨️</span>
+                    <div>
+                        <h2 class="text-2xl font-bold">22. Windows Keyboard Shortcuts</h2>
+                        <p class="opacity-80">Productivity 10x Badhao!</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Essential Shortcuts -->
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
+                        <h3 class="font-bold text-lg mb-4 flex items-center">
+                            <span class="mr-2">⭐</span> Essential
+                        </h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center bg-black/20 p-2 rounded">
+                                <kbd class="bg-white/20 px-2 py-1 rounded text-sm">Win + E</kbd>
+                                <span class="text-sm">File Explorer</span>
+                            </div>
+                            <div class="flex justify-between items-center bg-black/20 p-2 rounded">
+                                <kbd class="bg-white/20 px-2 py-1 rounded text-sm">Win + I</kbd>
+                                <span class="text-sm">Settings</span>
+                            </div>
+                            <div class="flex justify-between items-center bg-black/20 p-2 rounded">
+                                <kbd class="bg-white/20 px-2 py-1 rounded text-sm">Win + D</kbd>
+                                <span class="text-sm">Desktop Show</span>
+                            </div>
+                            <div class="flex justify-between items-center bg-black/20 p-2 rounded">
+                                <kbd class="bg-white/20 px-2 py-1 rounded text-sm">Win + L</kbd>
+                                <span class="text-sm">Lock Screen</span>
+                            </div>
+                            <div class="flex justify-between items-center bg-black/20 p-2 rounded">
+                                <kbd class="bg-white/20 px-2 py-1 rounded text-sm">Win + R</kbd>
+                                <span class="text-sm">Run Dialog</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Window Management -->
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
+                        <h3 class="font-bold text-lg mb-4 flex items-center">
+                            <span class="mr-2">🪟</span> Window Management
+                        </h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center bg-black/20 p-2 rounded">
+                                <kbd class="bg-white/20 px-2 py-1 rounded text-sm">Win + ←/→</kbd>
+                                <span class="text-sm">Snap Window</span>
+                            </div>
+                            <div class="flex justify-between items-center bg-black/20 p-2 rounded">
+                                <kbd class="bg-white/20 px-2 py-1 rounded text-sm">Alt + Tab</kbd>
+                                <span class="text-sm">Switch Apps</span>
+                            </div>
+                            <div class="flex justify-between items-center bg-black/20 p-2 rounded">
+                                <kbd class="bg-white/20 px-2 py-1 rounded text-sm">Win + Tab</kbd>
+                                <span class="text-sm">Task View</span>
+                            </div>
+                            <div class="flex justify-between items-center bg-black/20 p-2 rounded">
+                                <kbd class="bg-white/20 px-2 py-1 rounded text-sm">Alt + F4</kbd>
+                                <span class="text-sm">Close Window</span>
+                            </div>
+                            <div class="flex justify-between items-center bg-black/20 p-2 rounded">
+                                <kbd class="bg-white/20 px-2 py-1 rounded text-sm">Win + M</kbd>
+                                <span class="text-sm">Minimize All</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Power User -->
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
+                        <h3 class="font-bold text-lg mb-4 flex items-center">
+                            <span class="mr-2">🚀</span> Power User
+                        </h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center bg-black/20 p-2 rounded">
+                                <kbd class="bg-white/20 px-2 py-1 rounded text-sm">Win + X</kbd>
+                                <span class="text-sm">Power Menu</span>
+                            </div>
+                            <div class="flex justify-between items-center bg-black/20 p-2 rounded">
+                                <kbd class="bg-white/20 px-2 py-1 rounded text-sm">Win + Shift + S</kbd>
+                                <span class="text-sm">Screenshot</span>
+                            </div>
+                            <div class="flex justify-between items-center bg-black/20 p-2 rounded">
+                                <kbd class="bg-white/20 px-2 py-1 rounded text-sm">Ctrl + Shift + Esc</kbd>
+                                <span class="text-sm">Task Manager</span>
+                            </div>
+                            <div class="flex justify-between items-center bg-black/20 p-2 rounded">
+                                <kbd class="bg-white/20 px-2 py-1 rounded text-sm">Win + V</kbd>
+                                <span class="text-sm">Clipboard History</span>
+                            </div>
+                            <div class="flex justify-between items-center bg-black/20 p-2 rounded">
+                                <kbd class="bg-white/20 px-2 py-1 rounded text-sm">Win + .</kbd>
+                                <span class="text-sm">Emoji Panel 😀</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Virtual Desktop -->
+                <div class="mt-6 bg-white/10 p-4 rounded-xl">
+                    <h4 class="font-bold mb-3">🖥️ Virtual Desktop Shortcuts:</h4>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                        <div class="bg-black/20 p-3 rounded text-center">
+                            <kbd class="text-sm">Win + Ctrl + D</kbd>
+                            <p class="text-xs mt-1">New Desktop</p>
+                        </div>
+                        <div class="bg-black/20 p-3 rounded text-center">
+                            <kbd class="text-sm">Win + Ctrl + ←/→</kbd>
+                            <p class="text-xs mt-1">Switch Desktop</p>
+                        </div>
+                        <div class="bg-black/20 p-3 rounded text-center">
+                            <kbd class="text-sm">Win + Ctrl + F4</kbd>
+                            <p class="text-xs mt-1">Close Desktop</p>
+                        </div>
+                        <div class="bg-black/20 p-3 rounded text-center">
+                            <kbd class="text-sm">Win + Tab</kbd>
+                            <p class="text-xs mt-1">View All</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 23: Gaming Optimization -->
+        <section id="gaming" class="mb-12">
+            <div class="bg-gradient-to-r from-green-600 to-emerald-700 rounded-2xl shadow-lg p-8 text-white">
+                <div class="flex items-center mb-6">
+                    <span class="text-4xl mr-4">🎮</span>
+                    <div>
+                        <h2 class="text-2xl font-bold">23. Gaming Optimization</h2>
+                        <p class="opacity-80">FPS Badhao, Lag Hatao!</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <!-- Game Mode -->
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
+                        <h3 class="font-bold text-lg mb-4">🎯 Game Mode Enable Karo</h3>
+                        <div class="code-block p-3 mb-3">
+                            <code>ms-settings:gaming-gamemode</code>
+                            <button onclick="copyCode(this, 'ms-settings:gaming-gamemode')" class="copy-btn bg-white/20 hover:bg-white/30 text-white px-2 py-1 rounded text-xs transition">📋</button>
+                        </div>
+                        <ul class="text-sm space-y-2 opacity-90">
+                            <li>✓ Background processes pause hote hain</li>
+                            <li>✓ Windows updates game ke time nahi aate</li>
+                            <li>✓ CPU priority game ko milti hai</li>
+                        </ul>
+                    </div>
+
+                    <!-- GPU Settings -->
+                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
+                        <h3 class="font-bold text-lg mb-4">🖥️ GPU Settings</h3>
+                        <div class="code-block p-3 mb-3">
+                            <code>ms-settings:display-advancedgraphics</code>
+                            <button onclick="copyCode(this, 'ms-settings:display-advancedgraphics')" class="copy-btn bg-white/20 hover:bg-white/30 text-white px-2 py-1 rounded text-xs transition">📋</button>
+                        </div>
+                        <ul class="text-sm space-y-2 opacity-90">
+                            <li>✓ Game ke liye High Performance GPU select karo</li>
+                            <li>✓ Laptop mein dedicated GPU use hoga</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Gaming Tips Grid -->
+                <div class="grid md:grid-cols-4 gap-4 mb-6">
+                    <div class="bg-black/20 p-4 rounded-lg text-center">
+                        <span class="text-3xl">🔌</span>
+                        <p class="font-bold mt-2">Charger Lagao</p>
+                        <p class="text-xs opacity-70">Battery pe GPU throttle hota hai</p>
+                    </div>
+                    <div class="bg-black/20 p-4 rounded-lg text-center">
+                        <span class="text-3xl">❄️</span>
+                        <p class="font-bold mt-2">Cooling Pad</p>
+                        <p class="text-xs opacity-70">Heat se FPS drop hota hai</p>
+                    </div>
+                    <div class="bg-black/20 p-4 rounded-lg text-center">
+                        <span class="text-3xl">🚫</span>
+                        <p class="font-bold mt-2">Background Apps</p>
+                        <p class="text-xs opacity-70">Chrome, Discord close karo</p>
+                    </div>
+                    <div class="bg-black/20 p-4 rounded-lg text-center">
+                        <span class="text-3xl">🔄</span>
+                        <p class="font-bold mt-2">GPU Drivers</p>
+                        <p class="text-xs opacity-70">Latest drivers install karo</p>
+                    </div>
+                </div>
+
+                <!-- FPS Boost Commands -->
+                <div class="bg-white/10 p-4 rounded-xl">
+                    <h4 class="font-bold mb-3">🚀 FPS Boost Commands:</h4>
+                    <div class="grid md:grid-cols-2 gap-3">
+                        <div class="bg-black/20 p-3 rounded">
+                            <p class="text-sm mb-2">Disable Fullscreen Optimization:</p>
+                            <code class="text-xs text-yellow-300">Game.exe → Properties → Compatibility → Disable fullscreen optimizations</code>
+                        </div>
+                        <div class="bg-black/20 p-3 rounded">
+                            <p class="text-sm mb-2">High Priority Set Karo:</p>
+                            <code class="text-xs text-yellow-300">Task Manager → Game → Right Click → Go to Details → High Priority</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 24: Privacy & Security -->
+        <section id="privacy" class="mb-12">
+            <div class="bg-white rounded-2xl shadow-lg p-8 section-card card transition-all duration-300">
+                <div class="flex items-center mb-6">
+                    <span class="text-4xl mr-4">🔒</span>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800">24. Privacy & Security Tips</h2>
+                        <p class="text-gray-500">Apna Data Safe Rakho</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6 mb-6">
+                    <!-- Telemetry -->
+                    <div class="bg-red-50 p-6 rounded-xl border-2 border-red-200">
+                        <h3 class="font-bold text-red-800 mb-3">📡 Telemetry Disable</h3>
+                        <p class="text-sm text-gray-700 mb-3">Microsoft ko data bhejana band karo:</p>
+                        <div class="code-block p-2">
+                            <code class="text-xs">ms-settings:privacy</code>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-2">Settings → Privacy → General → All OFF</p>
+                    </div>
+
+                    <!-- Location -->
+                    <div class="bg-yellow-50 p-6 rounded-xl border-2 border-yellow-200">
+                        <h3 class="font-bold text-yellow-800 mb-3">📍 Location OFF</h3>
+                        <p class="text-sm text-gray-700 mb-3">Apps ko location access mat do:</p>
+                        <div class="code-block p-2">
+                            <code class="text-xs">ms-settings:privacy-location</code>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-2">Location services OFF karo</p>
+                    </div>
+
+                    <!-- Camera/Mic -->
+                    <div class="bg-blue-50 p-6 rounded-xl border-2 border-blue-200">
+                        <h3 class="font-bold text-blue-800 mb-3">📷 Camera/Mic Control</h3>
+                        <p class="text-sm text-gray-700 mb-3">Unwanted apps ka access hatao:</p>
+                        <div class="code-block p-2">
+                            <code class="text-xs">ms-settings:privacy-webcam</code>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-2">Sirf trusted apps ko allow karo</p>
+                    </div>
+                </div>
+
+                <!-- Security Commands -->
+                <div class="bg-gray-100 p-4 rounded-xl">
+                    <h4 class="font-bold text-gray-800 mb-3">🛡️ Security Commands:</h4>
+                    <div class="grid md:grid-cols-2 gap-3">
+                        <div class="bg-white p-3 rounded-lg shadow-sm">
+                            <div class="flex justify-between items-center">
+                                <code class="text-purple-600 font-bold">windowsdefender:</code>
+                                <button onclick="copyCode(this, 'windowsdefender:')" class="bg-purple-100 px-2 py-1 rounded text-xs">📋</button>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-1">Windows Security open karo</p>
+                        </div>
+                        <div class="bg-white p-3 rounded-lg shadow-sm">
+                            <div class="flex justify-between items-center">
+                                <code class="text-purple-600 font-bold">wf.msc</code>
+                                <button onclick="copyCode(this, 'wf.msc')" class="bg-purple-100 px-2 py-1 rounded text-xs">📋</button>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-1">Advanced Firewall settings</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 25: Recommended Free Tools -->
+        <section id="tools" class="mb-12">
+            <div class="bg-gradient-to-r from-amber-500 to-orange-600 rounded-2xl shadow-lg p-8 text-white">
+                <div class="flex items-center mb-6">
+                    <span class="text-4xl mr-4">🛠️</span>
+                    <div>
+                        <h2 class="text-2xl font-bold">25. Recommended Free Tools</h2>
+                        <p class="opacity-80">Best Free Software for Maintenance</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-4">
+                    <div class="bg-white/20 p-4 rounded-xl text-center hover:bg-white/30 transition">
+                        <span class="text-4xl">💿</span>
+                        <h4 class="font-bold mt-2">CrystalDiskInfo</h4>
+                        <p class="text-xs opacity-80 mt-1">HDD/SSD Health Check</p>
+                        <span class="inline-block mt-2 bg-green-500 px-2 py-1 rounded text-xs">FREE</span>
+                    </div>
+                    <div class="bg-white/20 p-4 rounded-xl text-center hover:bg-white/30 transition">
+                        <span class="text-4xl">🔥</span>
+                        <h4 class="font-bold mt-2">HWMonitor</h4>
+                        <p class="text-xs opacity-80 mt-1">Temperature Monitor</p>
+                        <span class="inline-block mt-2 bg-green-500 px-2 py-1 rounded text-xs">FREE</span>
+                    </div>
+                    <div class="bg-white/20 p-4 rounded-xl text-center hover:bg-white/30 transition">
+                        <span class="text-4xl">📊</span>
+                        <h4 class="font-bold mt-2">TreeSize Free</h4>
+                        <p class="text-xs opacity-80 mt-1">Disk Space Analyzer</p>
+                        <span class="inline-block mt-2 bg-green-500 px-2 py-1 rounded text-xs">FREE</span>
+                    </div>
+                    <div class="bg-white/20 p-4 rounded-xl text-center hover:bg-white/30 transition">
+                        <span class="text-4xl">⚡</span>
+                        <h4 class="font-bold mt-2">Autoruns</h4>
+                        <p class="text-xs opacity-80 mt-1">Startup Manager (Microsoft)</p>
+                        <span class="inline-block mt-2 bg-green-500 px-2 py-1 rounded text-xs">FREE</span>
+                    </div>
+                    <div class="bg-white/20 p-4 rounded-xl text-center hover:bg-white/30 transition">
+                        <span class="text-4xl">🧹</span>
+                        <h4 class="font-bold mt-2">BleachBit</h4>
+                        <p class="text-xs opacity-80 mt-1">Open Source Cleaner</p>
+                        <span class="inline-block mt-2 bg-green-500 px-2 py-1 rounded text-xs">FREE</span>
+                    </div>
+                    <div class="bg-white/20 p-4 rounded-xl text-center hover:bg-white/30 transition">
+                        <span class="text-4xl">🔓</span>
+                        <h4 class="font-bold mt-2">7-Zip</h4>
+                        <p class="text-xs opacity-80 mt-1">Best File Archiver</p>
+                        <span class="inline-block mt-2 bg-green-500 px-2 py-1 rounded text-xs">FREE</span>
+                    </div>
+                    <div class="bg-white/20 p-4 rounded-xl text-center hover:bg-white/30 transition">
+                        <span class="text-4xl">🌐</span>
+                        <h4 class="font-bold mt-2">Brave Browser</h4>
+                        <p class="text-xs opacity-80 mt-1">Fast & Private Browser</p>
+                        <span class="inline-block mt-2 bg-green-500 px-2 py-1 rounded text-xs">FREE</span>
+                    </div>
+                    <div class="bg-white/20 p-4 rounded-xl text-center hover:bg-white/30 transition">
+                        <span class="text-4xl">📝</span>
+                        <h4 class="font-bold mt-2">Notepad++</h4>
+                        <p class="text-xs opacity-80 mt-1">Better Notepad</p>
+                        <span class="inline-block mt-2 bg-green-500 px-2 py-1 rounded text-xs">FREE</span>
+                    </div>
+                </div>
+
+                <div class="mt-6 bg-white/10 p-4 rounded-lg">
+                    <p class="text-center">⚠️ <strong>Note:</strong> Inhein sirf official websites se download karo! Google pe search karke random sites se mat lo.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" onclick="scrollToTop()" class="fixed bottom-8 right-8 bg-purple-600 text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center hover:bg-purple-700 transition-all duration-300 opacity-0 invisible z-50">
+        <span class="text-2xl">↑</span>
+    </button>
+
+    <!-- Footer -->
+    <footer class="animated-bg text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <div class="inline-block bg-white/10 backdrop-blur-sm px-8 py-4 rounded-2xl mb-6">
+                    <p class="text-2xl font-bold mb-2">✅ Ye sab methods 100% safe hain!</p>
+                    <p class="opacity-80">Regularly use karne se laptop fast chalega, storage free rahega!</p>
+                </div>
+            </div>
+            
+            <!-- Author Section -->
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 mb-8">
+                <div class="flex items-center space-x-4 bg-white/10 px-6 py-4 rounded-xl">
+                    <img src="https://github.com/SudhirDevOps1.png" alt="SudhirDevOps1" class="w-16 h-16 rounded-full border-3 border-white" onerror="this.src='https://ui-avatars.com/api/?name=SD&background=667eea&color=fff&size=64'">
+                    <div>
+                        <p class="text-sm opacity-75">Created & Maintained by</p>
+                        <p class="text-xl font-bold">SudhirDevOps1</p>
+                        <p class="text-sm opacity-75">DevOps Engineer & Tech Enthusiast</p>
+                    </div>
+                </div>
+                
+                <div class="flex space-x-4">
+                    <a href="https://github.com/SudhirDevOps1" target="_blank" class="bg-white/20 hover:bg-white/30 px-6 py-3 rounded-full transition flex items-center space-x-2">
+                        <span>⭐</span>
+                        <span>GitHub</span>
+                    </a>
+                    <button onclick="shareWebsite()" class="bg-white/20 hover:bg-white/30 px-6 py-3 rounded-full transition flex items-center space-x-2">
+                        <span>📤</span>
+                        <span>Share</span>
+                    </button>
+                </div>
+            </div>
+           <footer class="w-full py-12 px-4">
+    <div class="max-w-6xl mx-auto">
+        
+        <div class="flex flex-wrap justify-center gap-4 mt-8 mb-12">
+            <a href="tools.html" class="bg-pink-500/80 hover:bg-pink-600 text-white px-5 py-2.5 rounded-full transition-all duration-300 hover:scale-105 shadow-lg flex items-center gap-2">
+                <span>🛠️</span> Extra Tools
+            </a>
+            <a href="scripts.html" class="bg-purple-500/80 hover:bg-purple-600 text-white px-5 py-2.5 rounded-full transition-all duration-300 hover:scale-105 shadow-lg flex items-center gap-2">
+                <span>📜</span> Scripts
+            </a>
+            <a href="troubleshoot.html" class="bg-green-500/80 hover:bg-green-600 text-white px-5 py-2.5 rounded-full transition-all duration-300 hover:scale-105 shadow-lg flex items-center gap-2">
+                <span>🔧</span> Troubleshoot
+            </a>
+            <a href="benchmark.html" class="bg-orange-500/80 hover:bg-orange-600 text-white px-5 py-2.5 rounded-full transition-all duration-300 hover:scale-105 shadow-lg flex items-center gap-2">
+                <span>📊</span> Benchmark
+            </a>
+            <a href="software.html" class="bg-blue-500/80 hover:bg-blue-600 text-white px-5 py-2.5 rounded-full transition-all duration-300 hover:scale-105 shadow-lg flex items-center gap-2">
+                <span>💿</span> Software
+            </a>
+            <a href="upgrade.html" class="bg-emerald-500/80 hover:bg-emerald-600 text-white px-5 py-2.5 rounded-full transition-all duration-300 hover:scale-105 shadow-lg flex items-center gap-2">
+                <span>🚀</span> Upgrade Guide
+            </a>
+        </div>
+
+        <div class="border-t border-white/20 pt-8 text-center text-white">
+            <p class="opacity-80 font-medium">
+                Made with ❤️ by <span class="text-blue-400">SudhirDevOps1</span> | Last Updated: 30/12/2025
+            </p>
+            <p class="opacity-50 text-sm mt-2 italic">
+                Windows Tips & Tricks for Everyone
+            </p>
+        </div>
+    </div>
+</footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform translate-y-20 opacity-0 transition-all duration-300">
+        ✅ Copied to clipboard!
+    </div>
+
+    <script>
+        // Copy to clipboard function
+        function copyCode(button, code) {
+            navigator.clipboard.writeText(code).then(() => {
+                showToast('✅ Copied to clipboard!');
+                const originalText = button.textContent;
+                button.textContent = '✅ Copied!';
+                button.classList.add('bg-green-500');
+                setTimeout(() => {
+                    button.textContent = originalText.includes('Copy') ? '📋 Copy' : '📋';
+                    button.classList.remove('bg-green-500');
+                }, 2000);
+            });
+        }
+
+        // Show toast notification
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 2500);
+        }
+
+        // Download batch script
+        function downloadScript() {
+            const script = `@echo off
+echo ========================================
+echo    LAPTOP CLEANUP SCRIPT
+echo    by SudhirDevOps1
+echo    Safe Cleanup - No System Files
+echo ========================================
+echo.
+
+echo [1/6] Cleaning User Temp Files...
+del /q/f/s "%TEMP%\\*" 2>nul
+echo Done!
+
+echo [2/6] Cleaning Windows Temp...
+del /q/f/s "C:\\Windows\\Temp\\*" 2>nul
+echo Done!
+
+echo [3/6] Cleaning Prefetch...
+del /q/f/s "C:\\Windows\\Prefetch\\*" 2>nul
+echo Done!
+
+echo [4/6] Cleaning Recent Files...
+del /q/f "%APPDATA%\\Microsoft\\Windows\\Recent\\*" 2>nul
+echo Done!
+
+echo [5/6] Flushing DNS Cache...
+ipconfig /flushdns
+echo Done!
+
+echo [6/6] Cleaning Thumbnail Cache...
+del /q/f/s "%LOCALAPPDATA%\\Microsoft\\Windows\\Explorer\\thumbcache_*.db" 2>nul
+echo Done!
+
+echo.
+echo ========================================
+echo    CLEANUP COMPLETE! 
+echo    by SudhirDevOps1
+echo ========================================
+pause`;
+
+            const blob = new Blob([script], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'SudhirDevOps1_cleanup.bat';
+            a.click();
+            URL.revokeObjectURL(url);
+            showToast('📥 Script downloaded!');
+        }
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Progress tracker functions
+        function updateProgress() {
+            const checkboxes = document.querySelectorAll('#checklistContainer input[type="checkbox"]');
+            const checked = document.querySelectorAll('#checklistContainer input[type="checkbox"]:checked').length;
+            const total = checkboxes.length;
+            const percent = Math.round((checked / total) * 100);
+            
+            document.getElementById('progressPercent').textContent = percent + '%';
+            document.getElementById('progressBar').style.width = percent + '%';
+            
+            // Save to localStorage
+            const checkState = Array.from(checkboxes).map(cb => cb.checked);
+            localStorage.setItem('cleanupProgress', JSON.stringify(checkState));
+            
+            // Show celebration if 100%
+            if (percent === 100) {
+                showToast('🎉 Congratulations! All tasks completed!');
+            }
+        }
+
+        function resetProgress() {
+            const checkboxes = document.querySelectorAll('#checklistContainer input[type="checkbox"]');
+            checkboxes.forEach(cb => cb.checked = false);
+            updateProgress();
+            showToast('🔄 Progress reset!');
+        }
+
+        // Load saved progress
+        function loadProgress() {
+            const saved = localStorage.getItem('cleanupProgress');
+            if (saved) {
+                const checkState = JSON.parse(saved);
+                const checkboxes = document.querySelectorAll('#checklistContainer input[type="checkbox"]');
+                checkboxes.forEach((cb, i) => {
+                    if (checkState[i]) cb.checked = true;
+                });
+                updateProgress();
+            }
+        }
+
+        // FAQ toggle
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('span:last-child');
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.textContent = '−';
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.add('hidden');
+                icon.textContent = '+';
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Back to top button
+        window.addEventListener('scroll', function() {
+            const btn = document.getElementById('backToTop');
+            if (window.pageYOffset > 500) {
+                btn.classList.remove('opacity-0', 'invisible');
+                btn.classList.add('opacity-100', 'visible');
+            } else {
+                btn.classList.add('opacity-0', 'invisible');
+                btn.classList.remove('opacity-100', 'visible');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Theme Toggle
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const icon = document.getElementById('themeIcon');
+            if (document.body.classList.contains('dark-mode')) {
+                icon.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                icon.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // Load saved theme
+        function loadTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                document.getElementById('themeIcon').textContent = '☀️';
+            }
+        }
+
+        // Share Website
+        function shareWebsite() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Laptop Ko Fast Karne Ke Tarike - SudhirDevOps1',
+                    text: 'Windows laptop ko fast karne ke 20+ safe methods!',
+                    url: window.location.href
+                });
+            } else {
+                navigator.clipboard.writeText(window.location.href);
+                showToast('🔗 Link copied to clipboard!');
+            }
+        }
+
+        // Searchable Commands Database
+        const commandsDB = [
+            { cmd: '%temp%', desc: 'User temp folder open karo', section: 'temp' },
+            { cmd: 'prefetch', desc: 'Prefetch folder open karo', section: 'prefetch' },
+            { cmd: 'cleanmgr', desc: 'Disk cleanup tool', section: 'diskcleanup' },
+            { cmd: 'recent', desc: 'Recent files folder', section: 'recent' },
+            { cmd: 'ipconfig /flushdns', desc: 'DNS cache clear karo', section: 'dns' },
+            { cmd: 'msconfig', desc: 'Startup configuration', section: 'startup' },
+            { cmd: 'dfrgui', desc: 'Defragmentation tool', section: 'defrag' },
+            { cmd: 'resmon', desc: 'Resource Monitor', section: 'monitoring' },
+            { cmd: 'perfmon', desc: 'Performance Monitor', section: 'monitoring' },
+            { cmd: 'eventvwr.msc', desc: 'Event Viewer', section: 'monitoring' },
+            { cmd: 'ncpa.cpl', desc: 'Network Connections', section: 'network' },
+            { cmd: 'appwiz.cpl', desc: 'Program Uninstaller', section: 'hidden-tools' },
+            { cmd: 'sysdm.cpl', desc: 'System Properties', section: 'visual' },
+            { cmd: 'powercfg', desc: 'Power configuration', section: 'power' },
+            { cmd: 'sfc /scannow', desc: 'System File Checker', section: 'repair' },
+            { cmd: 'chkdsk /f', desc: 'Check Disk for errors', section: 'hardware' },
+            { cmd: 'netsh wlan show profiles', desc: 'WiFi profiles list', section: 'network' },
+            { cmd: 'devmgmt.msc', desc: 'Device Manager', section: 'sysinfo' },
+            { cmd: 'msinfo32', desc: 'System Information', section: 'sysinfo' },
+            { cmd: 'dxdiag', desc: 'DirectX Diagnostic', section: 'sysinfo' },
+        ];
+
+       // Tips Database
+const tipsDB = [
+    "Weekly %temp% folder clean karne se 500MB-5GB space free hota hai! 🧹",
+    "SSD mein defrag MAT karo - life kam hoti hai, Optimize use karo! ⚡",
+    "Win + Shift + S se instant screenshot lo aur direct edit karo! 📸",
+    "Chrome ke bajaye Edge use karo - RAM kam khata hai aur Efficiency mode milta hai! 🌐",
+    "Gaming ke time charger lagao - full GPU power aur high FPS milegi! 🎮",
+    "Startup programs disable karo - boot time 50% tak kam ho jayega! 🚀",
+    "Win + V se clipboard history on karo, purane copied items wapas pao! 📋",
+    "ipconfig /flushdns se website loading aur DNS issues fix hote hain! 🌐",
+    "High Performance power plan se CPU ki full clock speed use karein! 🔥",
+    "Browser mein 10-15 se zyada tabs mat rakho, RAM aur Battery dono bachegi! 🔋",
+    "Ctrl + Shift + Esc se direct Task Manager open hota hai! ⚡",
+    "Win + D se instant Desktop par jao, saari windows minimize ho jayengi! 🖥️",
+    "God Mode folder banayein: Control Panel ki saari settings ek jagah milengi! 👑",
+    "Windows + L dabana na bhulein jab system se door jayein - Security first! 🔒",
+    "Storage Sense on rakho, Windows faltu files apne aap delete kar dega! 📂",
+    "Malwarebytes se mahine mein ek baar scan zaroor karein! 🛡️",
+    "Shift + Restart se Advanced Startup menu mein direct entry karein! 🛠️",
+    "Laptop ki battery 20% se 80% ke beech rakho, life lambi chalegi! 🔋",
+    "Command Prompt (CMD) ko hamesha 'Run as Administrator' karke chalayein! 💻",
+    "F2 dabane se kisi bhi file ya folder ko turant rename kar sakte ho! 📝"
+];
+        // Search Functions
+        function openSearch() {
+            document.getElementById('searchModal').classList.remove('hidden');
+            document.getElementById('searchInput').focus();
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeSearch() {
+            document.getElementById('searchModal').classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        function searchCommands(query) {
+            const resultsDiv = document.getElementById('searchResults');
+            if (!query.trim()) {
+                resultsDiv.innerHTML = '<p class="text-gray-500 text-center py-8">Type to search commands...</p>';
+                return;
+            }
+
+            const filtered = commandsDB.filter(c => 
+                c.cmd.toLowerCase().includes(query.toLowerCase()) || 
+                c.desc.toLowerCase().includes(query.toLowerCase())
+            );
+
+            if (filtered.length === 0) {
+                resultsDiv.innerHTML = '<p class="text-gray-500 text-center py-8">No commands found 😕</p>';
+                return;
+            }
+
+            resultsDiv.innerHTML = filtered.map(c => `
+                <div class="p-3 hover:bg-gray-100 rounded-lg cursor-pointer flex justify-between items-center mb-2" onclick="goToSection('${c.section}')">
+                    <div>
+                        <code class="bg-purple-100 text-purple-700 px-2 py-1 rounded font-bold">${c.cmd}</code>
+                        <p class="text-sm text-gray-600 mt-1">${c.desc}</p>
+                    </div>
+                    <button onclick="event.stopPropagation(); copyCode(this, '${c.cmd}')" class="bg-purple-500 text-white px-3 py-1 rounded text-sm">Copy</button>
+                </div>
+            `).join('');
+        }
+
+        function goToSection(sectionId) {
+            closeSearch();
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Close search on Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeSearch();
+            if (e.key === '/' && !document.getElementById('searchModal').classList.contains('hidden') === false) {
+                e.preventDefault();
+                openSearch();
+            }
+        });
+
+        // Print Function
+        function printPage() {
+            window.print();
+        }
+
+        // Tip of the Day
+        function showTipOfDay() {
+            const tip = tipsDB[Math.floor(Math.random() * tipsDB.length)];
+            document.getElementById('tipContent').textContent = tip;
+            const tipEl = document.getElementById('tipOfDay');
+            tipEl.classList.remove('translate-y-full', 'opacity-0');
+        }
+
+        function closeTip() {
+            const tipEl = document.getElementById('tipOfDay');
+            tipEl.classList.add('translate-y-full', 'opacity-0');
+            localStorage.setItem('tipShown', Date.now());
+        }
+
+        // Animated Counter
+        function animateCounters() {
+            document.querySelectorAll('[data-count]').forEach(el => {
+                const target = parseInt(el.dataset.count);
+                const duration = 2000;
+                const step = target / (duration / 16);
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += step;
+                    if (current >= target) {
+                        el.textContent = target + (el.textContent.includes('%') ? '' : '+');
+                        clearInterval(timer);
+                    } else {
+                        el.textContent = Math.floor(current);
+                    }
+                }, 16);
+            });
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadProgress();
+            loadTheme();
+            animateCounters();
+            
+            // Show tip after 3 seconds (once per day)
+            const lastTip = localStorage.getItem('tipShown');
+            const oneDayAgo = Date.now() - 86400000;
+            if (!lastTip || parseInt(lastTip) < oneDayAgo) {
+                setTimeout(showTipOfDay, 3000);
+            }
+            
+            // Add animation to cards on scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('section').forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(section);
+            });
+
+            // Keyboard shortcut hint
+            console.log('%c🔍 Pro Tip: Press "/" to search commands!', 'color: purple; font-size: 14px; font-weight: bold;');
+        });
+    </script>
+</body>
+</html>

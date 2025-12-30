@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🛠️ Extra Tools & Utilities | SudhirDevOps1</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Poppins', sans-serif; }
+        .code-block {
+            background: #1e293b;
+            border-radius: 8px;
+            position: relative;
+        }
+        .code-block code { color: #22d3ee; }
+        .copy-btn { position: absolute; top: 8px; right: 8px; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+        .gradient-bg { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <a href="index.html" class="inline-block mb-4 bg-white/20 px-4 py-2 rounded-full text-sm hover:bg-white/30 transition">
+                ← Back to Main Page
+            </a>
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4">🛠️ Extra Tools & Utilities</h1>
+            <p class="text-xl opacity-90">Advanced Commands Jo Har Kisi Ko Pata Nahi</p>
+            <div class="mt-4 inline-flex items-center bg-white/20 px-4 py-2 rounded-full">
+                <span class="text-sm">by <strong>SudhirDevOps1</strong></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+
+        <!-- God Mode Section -->
+        <section class="mb-12">
+            <div class="bg-white rounded-2xl shadow-lg p-8 card transition-all duration-300">
+                <div class="flex items-center mb-6">
+                    <span class="text-4xl mr-4">👑</span>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800">God Mode - Master Control Panel</h2>
+                        <p class="text-gray-500">Windows Ka Secret Super Folder</p>
+                    </div>
+                </div>
+
+                <div class="bg-purple-50 border-l-4 border-purple-500 p-4 mb-6 rounded-r-lg">
+                    <h3 class="font-semibold text-purple-800 mb-2">🤔 Ye Kya Hai?</h3>
+                    <p class="text-gray-700">God Mode ek special folder hai jisme Windows ke <strong>200+ settings</strong> ek jagah mil jate hain. Control Panel se bhi powerful!</p>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="font-semibold text-gray-800 mb-3">✅ God Mode Enable Karna:</h3>
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <p class="mb-2">1. Desktop pe Right Click → New → Folder</p>
+                        <p class="mb-2">2. Folder ka naam ye rakho:</p>
+                        <div class="code-block p-4 mt-2">
+                            <code class="text-sm">GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}</code>
+                            <button onclick="copyCode(this, 'GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}')" class="copy-btn bg-white/20 hover:bg-white/30 text-white px-3 py-1 rounded text-sm transition">📋 Copy</button>
+                        </div>
+                        <p class="mt-3">3. Enter press karo - Folder icon change ho jayega!</p>
+                    </div>
+                </div>
+
+                <div class="bg-green-50 p-4 rounded-lg">
+                    <h4 class="font-semibold text-green-800 mb-2">✨ God Mode Contains:</h4>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+                        <span class="bg-white px-3 py-2 rounded shadow-sm text-sm">Administrative Tools</span>
+                        <span class="bg-white px-3 py-2 rounded shadow-sm text-sm">Backup Settings</span>
+                        <span class="bg-white px-3 py-2 rounded shadow-sm text-sm">Display Settings</span>
+                        <span class="bg-white px-3 py-2 rounded shadow-sm text-sm">Network Settings</span>
+                        <span class="bg-white px-3 py-2 rounded shadow-sm text-sm">Power Options</span>
+                        <span class="bg-white px-3 py-2 rounded shadow-sm text-sm">Security Center</span>
+                        <span class="bg-white px-3 py-2 rounded shadow-sm text-sm">User Accounts</span>
+                        <span class="bg-white px-3 py-2 rounded shadow-sm text-sm">+ 200 More!</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Environment Variables -->
+        <section class="mb-12">
+            <div class="bg-white rounded-2xl shadow-lg p-8 card transition-all duration-300">
+                <div class="flex items-center mb-6">
+                    <span class="text-4xl mr-4">🔣</span>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800">Environment Variables Shortcuts</h2>
+                        <p class="text-gray-500">Quick Access Paths</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <code class="text-purple-600 font-bold">%USERPROFILE%</code>
+                        <p class="text-sm text-gray-600 mt-1">User folder (C:\Users\Name)</p>
+                        <button onclick="copyCode(this, '%USERPROFILE%')" class="mt-2 bg-purple-500 text-white px-3 py-1 rounded text-xs">📋 Copy</button>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <code class="text-purple-600 font-bold">%APPDATA%</code>
+                        <p class="text-sm text-gray-600 mt-1">Application Data folder</p>
+                        <button onclick="copyCode(this, '%APPDATA%')" class="mt-2 bg-purple-500 text-white px-3 py-1 rounded text-xs">📋 Copy</button>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <code class="text-purple-600 font-bold">%LOCALAPPDATA%</code>
+                        <p class="text-sm text-gray-600 mt-1">Local App Data</p>
+                        <button onclick="copyCode(this, '%LOCALAPPDATA%')" class="mt-2 bg-purple-500 text-white px-3 py-1 rounded text-xs">📋 Copy</button>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <code class="text-purple-600 font-bold">%PROGRAMFILES%</code>
+                        <p class="text-sm text-gray-600 mt-1">Program Files folder</p>
+                        <button onclick="copyCode(this, '%PROGRAMFILES%')" class="mt-2 bg-purple-500 text-white px-3 py-1 rounded text-xs">📋 Copy</button>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <code class="text-purple-600 font-bold">%WINDIR%</code>
+                        <p class="text-sm text-gray-600 mt-1">Windows folder</p>
+                        <button onclick="copyCode(this, '%WINDIR%')" class="mt-2 bg-purple-500 text-white px-3 py-1 rounded text-xs">📋 Copy</button>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <code class="text-purple-600 font-bold">%SYSTEMROOT%</code>
+                        <p class="text-sm text-gray-600 mt-1">System root (C:\Windows)</p>
+                        <button onclick="copyCode(this, '%SYSTEMROOT%')" class="mt-2 bg-purple-500 text-white px-3 py-1 rounded text-xs">📋 Copy</button>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <code class="text-purple-600 font-bold">%HOMEDRIVE%</code>
+                        <p class="text-sm text-gray-600 mt-1">Main drive (C:)</p>
+                        <button onclick="copyCode(this, '%HOMEDRIVE%')" class="mt-2 bg-purple-500 text-white px-3 py-1 rounded text-xs">📋 Copy</button>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <code class="text-purple-600 font-bold">%COMPUTERNAME%</code>
+                        <p class="text-sm text-gray-600 mt-1">Computer ka naam</p>
+                        <button onclick="copyCode(this, '%COMPUTERNAME%')" class="mt-2 bg-purple-500 text-white px-3 py-1 rounded text-xs">📋 Copy</button>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <code class="text-purple-600 font-bold">%USERNAME%</code>
+                        <p class="text-sm text-gray-600 mt-1">Current user ka naam</p>
+                        <button onclick="copyCode(this, '%USERNAME%')" class="mt-2 bg-purple-500 text-white px-3 py-1 rounded text-xs">📋 Copy</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Safe Registry Tweaks -->
+        <section class="mb-12">
+            <div class="bg-gradient-to-r from-red-500 to-orange-500 rounded-2xl shadow-lg p-8 text-white">
+                <div class="flex items-center mb-6">
+                    <span class="text-4xl mr-4">📝</span>
+                    <div>
+                        <h2 class="text-2xl font-bold">Safe Registry Tweaks</h2>
+                        <p class="opacity-80">Performance Boost (100% Safe)</p>
+                    </div>
+                </div>
+
+                <div class="bg-white/10 border-l-4 border-white p-4 mb-6 rounded-r-lg">
+                    <p class="text-white/90">⚠️ Registry edit karne se pehle backup zaroor lo! Ye tweaks safe hain par backup rakhna best practice hai.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Tweak 1 -->
+                    <div class="bg-white/20 p-6 rounded-xl">
+                        <h3 class="font-bold text-lg mb-3">🚀 Disable Startup Delay</h3>
+                        <p class="text-sm opacity-80 mb-3">Apps jaldi start honge boot ke baad</p>
+                        <div class="bg-black/30 p-3 rounded text-xs overflow-x-auto">
+                            <code>reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Serialize" /v StartupDelayInMSec /t REG_DWORD /d 0 /f</code>
+                        </div>
+                        <button onclick="copyCode(this, 'reg add \"HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Serialize\" /v StartupDelayInMSec /t REG_DWORD /d 0 /f')" class="mt-3 bg-white/30 px-4 py-2 rounded text-sm hover:bg-white/40 transition">📋 Copy Command</button>
+                    </div>
+
+                    <!-- Tweak 2 -->
+                    <div class="bg-white/20 p-6 rounded-xl">
+                        <h3 class="font-bold text-lg mb-3">⚡ Faster Menu Show</h3>
+                        <p class="text-sm opacity-80 mb-3">Right-click menu instantly open hoga</p>
+                        <div class="bg-black/30 p-3 rounded text-xs overflow-x-auto">
+                            <code>reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v MenuShowDelay /t REG_SZ /d 0 /f</code>
+                        </div>
+                        <button onclick="copyCode(this, 'reg add \"HKEY_CURRENT_USER\\Control Panel\\Desktop\" /v MenuShowDelay /t REG_SZ /d 0 /f')" class="mt-3 bg-white/30 px-4 py-2 rounded text-sm hover:bg-white/40 transition">📋 Copy Command</button>
+                    </div>
+
+                    <!-- Tweak 3 -->
+                    <div class="bg-white/20 p-6 rounded-xl">
+                        <h3 class="font-bold text-lg mb-3">🖱️ Disable Mouse Acceleration</h3>
+                        <p class="text-sm opacity-80 mb-3">Gaming ke liye better aim</p>
+                        <div class="bg-black/30 p-3 rounded text-xs overflow-x-auto">
+                            <code>reg add "HKEY_CURRENT_USER\Control Panel\Mouse" /v MouseSpeed /t REG_SZ /d 0 /f</code>
+                        </div>
+                        <button onclick="copyCode(this, 'reg add \"HKEY_CURRENT_USER\\Control Panel\\Mouse\" /v MouseSpeed /t REG_SZ /d 0 /f')" class="mt-3 bg-white/30 px-4 py-2 rounded text-sm hover:bg-white/40 transition">📋 Copy Command</button>
+                    </div>
+
+                    <!-- Tweak 4 -->
+                    <div class="bg-white/20 p-6 rounded-xl">
+                        <h3 class="font-bold text-lg mb-3">🔒 Disable Lock Screen</h3>
+                        <p class="text-sm opacity-80 mb-3">Seedha password screen pe jao</p>
+                        <div class="bg-black/30 p-3 rounded text-xs overflow-x-auto">
+                            <code>reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Personalization" /v NoLockScreen /t REG_DWORD /d 1 /f</code>
+                        </div>
+                        <button onclick="copyCode(this, 'reg add \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows\\Personalization\" /v NoLockScreen /t REG_DWORD /d 1 /f')" class="mt-3 bg-white/30 px-4 py-2 rounded text-sm hover:bg-white/40 transition">📋 Copy Command</button>
+                    </div>
+                </div>
+
+                <!-- Registry Backup Command -->
+                <div class="mt-6 bg-yellow-500/30 p-4 rounded-lg">
+                    <h4 class="font-bold mb-2">📦 Registry Backup Command (Pehle ye run karo):</h4>
+                    <div class="bg-black/30 p-3 rounded">
+                        <code>reg export HKEY_CURRENT_USER C:\backup_registry.reg</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Batch Scripts Collection -->
+        <section class="mb-12">
+            <div class="bg-white rounded-2xl shadow-lg p-8 card transition-all duration-300">
+                <div class="flex items-center mb-6">
+                    <span class="text-4xl mr-4">📜</span>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800">Ready-to-Use Batch Scripts</h2>
+                        <p class="text-gray-500">Download aur Run Karo</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Script 1 -->
+                    <div class="border-2 border-purple-200 rounded-xl p-6 hover:border-purple-400 transition">
+                        <div class="flex items-center mb-3">
+                            <span class="text-3xl mr-3">🧹</span>
+                            <h3 class="font-bold text-lg">Complete Cleanup Script</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Temp, Prefetch, DNS, Recent - sab ek click mein clean!</p>
+                        <button onclick="downloadCleanupScript()" class="w-full bg-purple-500 text-white py-2 rounded-lg hover:bg-purple-600 transition">📥 Download cleanup.bat</button>
+                    </div>
+
+                    <!-- Script 2 -->
+                    <div class="border-2 border-blue-200 rounded-xl p-6 hover:border-blue-400 transition">
+                        <div class="flex items-center mb-3">
+                            <span class="text-3xl mr-3">🔧</span>
+                            <h3 class="font-bold text-lg">System Repair Script</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">DISM + SFC automatically run karega</p>
+                        <button onclick="downloadRepairScript()" class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition">📥 Download repair.bat</button>
+                    </div>
+
+                    <!-- Script 3 -->
+                    <div class="border-2 border-green-200 rounded-xl p-6 hover:border-green-400 transition">
+                        <div class="flex items-center mb-3">
+                            <span class="text-3xl mr-3">📶</span>
+                            <h3 class="font-bold text-lg">Network Reset Script</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Complete network stack reset</p>
+                        <button onclick="downloadNetworkScript()" class="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition">📥 Download network_reset.bat</button>
+                    </div>
+
+                    <!-- Script 4 -->
+                    <div class="border-2 border-orange-200 rounded-xl p-6 hover:border-orange-400 transition">
+                        <div class="flex items-center mb-3">
+                            <span class="text-3xl mr-3">🎮</span>
+                            <h3 class="font-bold text-lg">Gaming Optimizer Script</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Gaming ke liye system optimize karega</p>
+                        <button onclick="downloadGamingScript()" class="w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-orange-600 transition">📥 Download gaming_boost.bat</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PowerShell One-Liners -->
+        <section class="mb-12">
+            <div class="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl shadow-lg p-8 text-white">
+                <div class="flex items-center mb-6">
+                    <span class="text-4xl mr-4">⚡</span>
+                    <div>
+                        <h2 class="text-2xl font-bold">PowerShell One-Liners</h2>
+                        <p class="opacity-80">Copy-Paste aur Run!</p>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="bg-white/10 p-4 rounded-lg">
+                        <h4 class="font-semibold mb-2">📊 Installed Programs List Export:</h4>
+                        <div class="bg-black/30 p-3 rounded overflow-x-auto">
+                            <code class="text-sm">Get-ItemProperty HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\* | Select-Object DisplayName, DisplayVersion | Export-Csv -Path "$env:USERPROFILE\Desktop\installed_apps.csv"</code>
+                        </div>
+                        <button onclick="copyCode(this, 'Get-ItemProperty HKLM:\\Software\\Wow6432Node\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\* | Select-Object DisplayName, DisplayVersion | Export-Csv -Path \"$env:USERPROFILE\\Desktop\\installed_apps.csv\"')" class="mt-2 bg-white/20 px-3 py-1 rounded text-sm">📋 Copy</button>
+                    </div>
+
+                    <div class="bg-white/10 p-4 rounded-lg">
+                        <h4 class="font-semibold mb-2">🔋 Battery Health Report:</h4>
+                        <div class="bg-black/30 p-3 rounded overflow-x-auto">
+                            <code class="text-sm">powercfg /batteryreport /output "$env:USERPROFILE\Desktop\battery_report.html"; Start-Process "$env:USERPROFILE\Desktop\battery_report.html"</code>
+                        </div>
+                        <button onclick="copyCode(this, 'powercfg /batteryreport /output \"$env:USERPROFILE\\Desktop\\battery_report.html\"; Start-Process \"$env:USERPROFILE\\Desktop\\battery_report.html\"')" class="mt-2 bg-white/20 px-3 py-1 rounded text-sm">📋 Copy</button>
+                    </div>
+
+                    <div class="bg-white/10 p-4 rounded-lg">
+                        <h4 class="font-semibold mb-2">💾 Large Files Find (100MB+):</h4>
+                        <div class="bg-black/30 p-3 rounded overflow-x-auto">
+                            <code class="text-sm">Get-ChildItem C:\ -Recurse -ErrorAction SilentlyContinue | Where-Object {$_.Length -gt 100MB} | Sort-Object Length -Descending | Select-Object FullName, @{N='Size(MB)';E={[math]::Round($_.Length/1MB,2)}} -First 20</code>
+                        </div>
+                        <button onclick="copyCode(this, 'Get-ChildItem C:\\ -Recurse -ErrorAction SilentlyContinue | Where-Object {$_.Length -gt 100MB} | Sort-Object Length -Descending | Select-Object FullName, @{N=\\'Size(MB)\\';E={[math]::Round($_.Length/1MB,2)}} -First 20')" class="mt-2 bg-white/20 px-3 py-1 rounded text-sm">📋 Copy</button>
+                    </div>
+
+                    <div class="bg-white/10 p-4 rounded-lg">
+                        <h4 class="font-semibold mb-2">🗑️ Empty Recycle Bin:</h4>
+                        <div class="bg-black/30 p-3 rounded overflow-x-auto">
+                            <code class="text-sm">Clear-RecycleBin -Force -ErrorAction SilentlyContinue</code>
+                        </div>
+                        <button onclick="copyCode(this, 'Clear-RecycleBin -Force -ErrorAction SilentlyContinue')" class="mt-2 bg-white/20 px-3 py-1 rounded text-sm">📋 Copy</button>
+                    </div>
+
+                    <div class="bg-white/10 p-4 rounded-lg">
+                        <h4 class="font-semibold mb-2">📡 WiFi Passwords (All Saved):</h4>
+                        <div class="bg-black/30 p-3 rounded overflow-x-auto">
+                            <code class="text-sm">(netsh wlan show profiles) | Select-String "\:(.+)$" | %{$name=$_.Matches.Groups[1].Value.Trim(); $_} | %{(netsh wlan show profile name="$name" key=clear)} | Select-String "Key Content\W+\:(.+)$" | %{$pass=$_.Matches.Groups[1].Value.Trim(); $_} | %{[PSCustomObject]@{PROFILE_NAME=$name;PASSWORD=$pass}}</code>
+                        </div>
+                        <button onclick="copyCode(this, '(netsh wlan show profiles) | Select-String \"\\:(.+)$\" | %{$name=$_.Matches.Groups[1].Value.Trim(); $_} | %{(netsh wlan show profile name=\"$name\" key=clear)} | Select-String \"Key Content\\W+\\:(.+)$\" | %{$pass=$_.Matches.Groups[1].Value.Trim(); $_} | %{[PSCustomObject]@{PROFILE_NAME=$name;PASSWORD=$pass}}')" class="mt-2 bg-white/20 px-3 py-1 rounded text-sm">📋 Copy</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- System Diagnostic Commands -->
+        <section class="mb-12">
+            <div class="bg-white rounded-2xl shadow-lg p-8 card transition-all duration-300">
+                <div class="flex items-center mb-6">
+                    <span class="text-4xl mr-4">🔬</span>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-800">System Diagnostic Commands</h2>
+                        <p class="text-gray-500">Problem Identify Karo</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-500">
+                        <h4 class="font-bold text-gray-800">Memory Diagnostic</h4>
+                        <code class="text-blue-600 text-sm">mdsched.exe</code>
+                        <p class="text-xs text-gray-500 mt-1">RAM test karega (restart hoga)</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-green-500">
+                        <h4 class="font-bold text-gray-800">DirectX Diagnostic</h4>
+                        <code class="text-green-600 text-sm">dxdiag</code>
+                        <p class="text-xs text-gray-500 mt-1">Graphics & sound info</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-purple-500">
+                        <h4 class="font-bold text-gray-800">System Config</h4>
+                        <code class="text-purple-600 text-sm">msconfig</code>
+                        <p class="text-xs text-gray-500 mt-1">Boot options & services</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-orange-500">
+                        <h4 class="font-bold text-gray-800">Disk Management</h4>
+                        <code class="text-orange-600 text-sm">diskmgmt.msc</code>
+                        <p class="text-xs text-gray-500 mt-1">Partition management</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-red-500">
+                        <h4 class="font-bold text-gray-800">Reliability Monitor</h4>
+                        <code class="text-red-600 text-sm">perfmon /rel</code>
+                        <p class="text-xs text-gray-500 mt-1">Crash history & stability</p>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-cyan-500">
+                        <h4 class="font-bold text-gray-800">Problem Steps Recorder</h4>
+                        <code class="text-cyan-600 text-sm">psr</code>
+                        <p class="text-xs text-gray-500 mt-1">Screen record with steps</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Useful Websites -->
+        <section class="mb-12">
+            <div class="bg-gradient-to-r from-green-500 to-teal-500 rounded-2xl shadow-lg p-8 text-white">
+                <div class="flex items-center mb-6">
+                    <span class="text-4xl mr-4">🌐</span>
+                    <div>
+                        <h2 class="text-2xl font-bold">Useful Websites & Tools</h2>
+                        <p class="opacity-80">Online Resources</p>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <a href="https://www.cpubenchmark.net" target="_blank" class="bg-white/20 p-4 rounded-lg hover:bg-white/30 transition text-center">
+                        <span class="text-3xl">📊</span>
+                        <h4 class="font-bold mt-2">CPU Benchmark</h4>
+                        <p class="text-xs opacity-80">CPU performance compare</p>
+                    </a>
+                    <a href="https://www.userbenchmark.com" target="_blank" class="bg-white/20 p-4 rounded-lg hover:bg-white/30 transition text-center">
+                        <span class="text-3xl">⚡</span>
+                        <h4 class="font-bold mt-2">UserBenchmark</h4>
+                        <p class="text-xs opacity-80">Full PC benchmark</p>
+                    </a>
+                    <a href="https://www.virustotal.com" target="_blank" class="bg-white/20 p-4 rounded-lg hover:bg-white/30 transition text-center">
+                        <span class="text-3xl">🛡️</span>
+                        <h4 class="font-bold mt-2">VirusTotal</h4>
+                        <p class="text-xs opacity-80">File virus scan</p>
+                    </a>
+                    <a href="https://www.speedtest.net" target="_blank" class="bg-white/20 p-4 rounded-lg hover:bg-white/30 transition text-center">
+                        <span class="text-3xl">🚀</span>
+                        <h4 class="font-bold mt-2">Speedtest</h4>
+                        <p class="text-xs opacity-80">Internet speed test</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-2">Made with ❤️ by <strong>SudhirDevOps1</strong></p>
+            <a href="index.html" class="inline-block bg-white/20 px-6 py-2 rounded-full hover:bg-white/30 transition">
+                ← Back to Main Page
+            </a>
+        </div>
+    </footer>
+
+    <!-- Toast -->
+    <div id="toast" class="fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform translate-y-20 opacity-0 transition-all duration-300">
+        ✅ Copied!
+    </div>
+
+    <script>
+        function copyCode(button, code) {
+            navigator.clipboard.writeText(code).then(() => {
+                showToast('✅ Copied to clipboard!');
+            });
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 2500);
+        }
+
+        function downloadCleanupScript() {
+            const script = `@echo off
+echo ========================================
+echo    COMPLETE CLEANUP SCRIPT
+echo    by SudhirDevOps1
+echo ========================================
+echo.
+echo [1/6] Cleaning User Temp...
+del /q/f/s "%TEMP%\\*" 2>nul
+echo [2/6] Cleaning Windows Temp...
+del /q/f/s "C:\\Windows\\Temp\\*" 2>nul
+echo [3/6] Cleaning Prefetch...
+del /q/f/s "C:\\Windows\\Prefetch\\*" 2>nul
+echo [4/6] Cleaning Recent...
+del /q/f "%APPDATA%\\Microsoft\\Windows\\Recent\\*" 2>nul
+echo [5/6] Flushing DNS...
+ipconfig /flushdns
+echo [6/6] Cleaning Thumbnails...
+del /q/f/s "%LOCALAPPDATA%\\Microsoft\\Windows\\Explorer\\thumbcache_*.db" 2>nul
+echo.
+echo ======== CLEANUP COMPLETE! ========
+pause`;
+            downloadFile('cleanup.bat', script);
+        }
+
+        function downloadRepairScript() {
+            const script = `@echo off
+echo ========================================
+echo    SYSTEM REPAIR SCRIPT
+echo    by SudhirDevOps1
+echo ========================================
+echo.
+echo Running DISM (this may take 10-30 mins)...
+DISM /Online /Cleanup-Image /RestoreHealth
+echo.
+echo Running System File Checker...
+sfc /scannow
+echo.
+echo ======== REPAIR COMPLETE! ========
+pause`;
+            downloadFile('repair.bat', script);
+        }
+
+        function downloadNetworkScript() {
+            const script = `@echo off
+echo ========================================
+echo    NETWORK RESET SCRIPT
+echo    by SudhirDevOps1
+echo ========================================
+echo.
+echo Resetting Winsock...
+netsh winsock reset
+echo Resetting IP Stack...
+netsh int ip reset
+echo Releasing IP...
+ipconfig /release
+echo Renewing IP...
+ipconfig /renew
+echo Flushing DNS...
+ipconfig /flushdns
+echo.
+echo ======== NETWORK RESET COMPLETE! ========
+echo Please restart your computer.
+pause`;
+            downloadFile('network_reset.bat', script);
+        }
+
+        function downloadGamingScript() {
+            const script = `@echo off
+echo ========================================
+echo    GAMING OPTIMIZER SCRIPT
+echo    by SudhirDevOps1
+echo ========================================
+echo.
+echo Setting High Performance Power Plan...
+powercfg /setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
+echo Disabling Windows Tips...
+reg add "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager" /v "SubscribedContent-338389Enabled" /t REG_DWORD /d 0 /f
+echo Disabling Game Bar Tips...
+reg add "HKEY_CURRENT_USER\\Software\\Microsoft\\GameBar" /v "ShowStartupPanel" /t REG_DWORD /d 0 /f
+echo Cleaning Temp Files...
+del /q/f/s "%TEMP%\\*" 2>nul
+echo Flushing DNS...
+ipconfig /flushdns
+echo.
+echo ======== GAMING MODE ENABLED! ========
+pause`;
+            downloadFile('gaming_boost.bat', script);
+        }
+
+        function downloadFile(filename, content) {
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            a.click();
+            URL.revokeObjectURL(url);
+            showToast('📥 ' + filename + ' downloaded!');
+        }
+    </script>
+</body>
+</html>
